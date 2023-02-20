@@ -5,6 +5,7 @@ import { Main } from './components/Main/Main';
 import { Footer } from './components/Footer/Footer';
 import { Autorization } from './components/Autorization/Autorization';
 import { Promotion } from './components/Promotion/Promotion';
+
 // import { useState } from 'react';
 
 

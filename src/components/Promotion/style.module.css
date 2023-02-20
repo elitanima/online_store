@@ -1,4 +1,5 @@
 .promotion {
+    overflow: scroll;
     background-color: rgb(75, 79, 193);
     margin-bottom: 10px;
     border-radius: 20px;
@@ -6,4 +7,9 @@
     height: 50%;
     margin-top: 10px;
     
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
