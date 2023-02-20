@@ -20,11 +20,14 @@ export function Button_autorization(){
     return (
       <>
         {avtorizationModal}
+        {registrationModal}
         <div className={style.button_view}>
           <button className={style.button} onClick={() => {
                 setOpenAutorization_window(!openAutorization_window);
                 }}>Вход</button> 
-          <button className={style.button}>Регистрация</button> 
+          <button className={style.button} onClick={() => {
+                setOpenRegistration_window(!openRegistration_window);
+                }}>Регистрация</button> 
         </div>
       </>
     )   
