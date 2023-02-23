@@ -1,29 +1,26 @@
 
 import './App.css';
-import { Header } from './components/Header/Header';
-import { Main } from './components/Main/Main';
-import { Footer } from './components/Footer/Footer';
+import React from "react";
+// import { Header } from './components/Header/Header';
+// import { Main } from './components/Main/Main';
+// import { Footer } from './components/Footer/Footer';
 import { Autorization } from './components/Autorization/Autorization';
 import { Promotion } from './components/Promotion/Promotion';
+import { Navigate } from "react-router-dom";
 
 // import { useState } from 'react';
 
+
+export const FirstContext = React.createContext({});
 
 
 function App() {
 
   return (
     <div className='container'>
-      <div className='promotion_view'>
-        <Promotion />
-      </div>
-      <div className='screenView'>
-        <Header />
-        <Main />  
-        <Footer />
-      </div>
+     
       <div className='authorization'>
-        <Autorization />
+        <Navigate to="/autorization"/>
       </div>
     </div>
    
@@ -31,3 +28,12 @@ function App() {
 }
 
 export default App;
+
+// {/* <div className='promotion_view'>
+// <Promotion />
+// </div>
+// <div className='screenView'>
+// <Header />
+// <Main />  
+// <Footer />
+// </div> */}

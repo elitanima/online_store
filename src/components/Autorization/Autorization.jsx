@@ -4,8 +4,8 @@ import style from './style.module.css'
 export function Autorization() {
     
     return (
-        <footer className={style.autorization}>
+        <div className={style.autorization}>
         <Button_autorization />
-        </footer>
+        </div>
     )   
 }
