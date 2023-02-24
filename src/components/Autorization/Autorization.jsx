@@ -5,7 +5,7 @@ export function Autorization() {
     
     return (
         <div className={style.autorization}>
-        <Button_autorization />
+            
         </div>
     )   
 }
