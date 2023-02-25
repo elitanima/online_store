@@ -22,9 +22,6 @@ function App() {
         <Main />  
         <Footer />
       </div>
-      <div className='authorization'>
-        <Autorization />
-      </div>
     </div>
    
   );

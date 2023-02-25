@@ -1,6 +1,8 @@
-
+body {
+  background-color: aliceblue;
+}
 .container {
-    background-color: rgb(95, 133, 229);
+    background: linear-gradient( rgba(5, 91, 229, 0.654), rgba(19, 71, 154, 0.697));
     width: 100vw;
     height: 100vh;
     display: grid;
