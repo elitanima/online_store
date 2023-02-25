@@ -1,7 +1,12 @@
 .main {
+    overflow: scroll;
     background-color: rgb(217, 15, 15);
     border-radius: 20px;
     /* width: 100px;
     height: 15%; */
-    
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
