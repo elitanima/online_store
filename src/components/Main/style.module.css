@@ -1,6 +1,7 @@
 .main {
     overflow: scroll;
-    background-color: rgb(217, 15, 15);
+    background: linear-gradient( rgba(5, 91, 229, 0.2), rgba(19, 71, 154, 0.2));
+    filter: blur(1px);
     border-radius: 20px;
     /* width: 100px;
     height: 15%; */

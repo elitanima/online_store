@@ -3,8 +3,8 @@ import './App.css';
 import { Header } from './components/Header/Header';
 import { Main } from './components/Main/Main';
 import { Footer } from './components/Footer/Footer';
-import { Autorization } from './components/Autorization/Autorization';
 import { Promotion } from './components/Promotion/Promotion';
+import { Account_module } from './components/Account_module/Account_module';
 
 // import { useState } from 'react';
 
@@ -21,6 +21,9 @@ function App() {
         <Header />
         <Main />  
         <Footer />
+      </div>
+      <div className='authorization'>
+       <Account_module />
       </div>
     </div>
    

@@ -1,0 +1,52 @@
+.account_module {
+    display: flex;
+    align-items: center;
+    background: linear-gradient( rgba(5, 91, 229, 0.9), rgba(19, 71, 154, 0.9));
+    margin-bottom: 10px;
+    border-radius: 20px;
+    width: 90%;
+    height: 30%;
+    margin-top: 10px;
+    
+}
+
+.button {
+    border: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.button:active {
+    transform: scale(103%);
+}
+
+.button_view {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button_exit {
+    background-image: url(icon/exit.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+    border: none; 
+}
+
+.button_user {
+    background-image: url(icon/user.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+    border: none; 
+}

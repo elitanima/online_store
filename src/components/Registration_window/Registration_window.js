@@ -18,7 +18,7 @@ export function Registration_window() {
                         <input className={style.form_data} type = "password" name="userPassword" id="userPassword" placeholder="Придумайте пароль" min="1"></input>
                         <input className={style.form_data} type="text" name="group" id="group" placeholder="Группа"></input>
                         <button className={style.form_data} data-btn="entry">Регистрация</button>
-                        <span className={style.form_data} data-btn="formAutorizationClose" onClick={() => navigate("/")}>Отмена</span>
+                        <span className={style.form_data} data-btn="formAutorizationClose" onClick={() => navigate(-1)}>Отмена</span>
                     </form>
                 </div>
             </div>
@@ -26,10 +26,10 @@ export function Registration_window() {
     )   
 }
 
-{/* <div className={style.hidden} data-modal="id_modal_add_god">
-<div className={style.end_modal_registration}>  
-    <div className={style.modal}>
+// {/* <div className={style.hidden} data-modal="id_modal_add_god">
+// <div className={style.end_modal_registration}>  
+//     <div className={style.modal}>
         
-    </div>
-</div>
-</div> */}
+//     </div>
+// </div>
+// </div> */}

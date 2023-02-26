@@ -1,5 +1,5 @@
 .footer {
-    background-color: aqua;
+    background: linear-gradient( rgba(5, 91, 229, 0.9), rgba(19, 71, 154, 0.9));
     margin-bottom: 10px;
     border-radius: 20px;
     width: 100%;
