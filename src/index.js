@@ -46,11 +46,11 @@ const router = createBrowserRouter([
     path: "/profile",
     element: <Profile/>
   },
-  {
-    //Контакты
-    path: "/contacts",
-    element: <Contacts_view/>
-  },
+  // {
+  //   //Контакты
+  //   path: "/contacts",
+  //   element: <Contacts_view/>
+  // },
 
  
 ]);

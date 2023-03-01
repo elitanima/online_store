@@ -2,18 +2,18 @@
 
 import style from './style.module.css'
 
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 
-export function Contacts_view() {
+export function Contacts_view( { openContacts_view, setContacts_view }) {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     return (
         <div className={style.end_modal}>  
              <div className={style.modal}>
                 <div className={style.form_avtorization}>
-                    <span className={style.form_data} data-btn="formAutorizationClose" onClick={() => navigate(-1)}>Назад</span>
+                    <span className={style.button_close} onClick={() => { setContacts_view(!openContacts_view) }}></span>
                 </div>
                        
             </div>

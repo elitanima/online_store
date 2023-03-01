@@ -1,13 +1,14 @@
 .account_module {
     display: flex;
+    align-content: center;
     align-items: center;
     background: linear-gradient( rgba(5, 91, 229, 0.9), rgba(19, 71, 154, 0.9));
     margin-bottom: 10px;
     border-radius: 20px;
     width: 90%;
-    height: 10%;
+    height: 65px;
     min-height: 65px;
-    max-height: 65px;
+    /* max-height: 65px; */
     margin-top: 10px;
     
 }
@@ -26,9 +27,12 @@
 
 .button_view {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 4vw);
     justify-content: center;
-    gap: 30px;
+    justify-items: center;
+    gap: 20px;
+    padding: 10px;
 }
 
 .button_exit {
@@ -62,4 +66,17 @@
     height: 35px;
     filter: invert(1);
     border: none; 
+}
+
+/* media Adaptive */
+@media (max-width: 749px) {
+    .account_module {
+        height: 120px;
+    }
+}
+@media (max-width: 473px) {
+    .account_module {
+        height: 160px;
+        min-width: 60px;
+    }
 }
