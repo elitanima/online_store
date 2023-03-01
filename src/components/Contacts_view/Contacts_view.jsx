@@ -10,11 +10,12 @@ export function Contacts_view() {
     const navigate = useNavigate();
 
     return (
-        <div className={style.hidden}>
-            <div className={style.end_modal_avtorization}>  
-                <div className={style.modal}>
-                        <span className={style.form_data} data-btn="formAutorizationClose" onClick={() => navigate("/")}>Отмена</span>
+        <div className={style.end_modal}>  
+             <div className={style.modal}>
+                <div className={style.form_avtorization}>
+                    <span className={style.form_data} data-btn="formAutorizationClose" onClick={() => navigate(-1)}>Назад</span>
                 </div>
+                       
             </div>
         </div>
     )   
