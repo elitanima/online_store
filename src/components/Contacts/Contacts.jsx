@@ -7,12 +7,19 @@ export function Contacts() {
 
     return (
         <div className={style.contacts_view}>
-            <button className={style.contacts_github} onClick={() => navigate("/contacts")}></button> 
-            <button className={style.contacts_vk} onClick={() => navigate("/contacts")}></button> 
-            <button className={style.contacts_email} onClick={() => navigate("/contacts")}></button> 
+            <button className={style.contacts_contacts} onClick={() => navigate("/contacts")}></button> 
             
-            <a href="https://github.com/elitanima" className="nav-link d-inline" target="_blank" rel="noopener noreferrer">
-            <button className={style.contacts_email}></button> 
+            <a href="https://github.com/elitanima" >
+            <button className={style.contacts_github} ></button> 
+            </a>
+            <a href="https://vk.com/elitanima" >
+            <button className={style.contacts_vk} ></button>
+            </a>
+            <a href="https://t.me/elitanima" >
+            <button className={style.contacts_telegram} ></button>
+            </a>
+            <a href="mailto: elitanima@vk.com" >
+            <button className={style.contacts_email}></button>
             </a>
            
         </div>

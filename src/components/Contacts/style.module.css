@@ -1,4 +1,15 @@
 
+.contacts_contacts {
+    background-image: url(icon/contacts.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+    border: none; 
+}
+
 .contacts_github {
     background-image: url(icon/github.png);
     background-repeat: no-repeat;
@@ -12,6 +23,17 @@
 
 .contacts_vk {
     background-image: url(icon/vk.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+    border: none; 
+}
+
+.contacts_telegram {
+    background-image: url(icon/telegram.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: rgb(255, 255, 255, 0);
@@ -36,5 +58,5 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
