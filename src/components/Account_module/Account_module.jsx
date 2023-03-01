@@ -13,7 +13,6 @@ export function Account_module() {
                 <button className={style.button_user} onClick={() => navigate("/profile")}></button> 
                 <button className={style.button_basket} onClick={() => navigate("/basket")}></button>
                 <button className={style.button_exit} onClick={() => navigate("/")}></button>
-
          </div>
         </div>
     )   

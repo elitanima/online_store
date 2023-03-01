@@ -1,16 +1,27 @@
+
 .profile {
-    overflow: scroll;
-    background: linear-gradient( rgba(5, 91, 229, 0.2), rgba(19, 71, 154, 0.2));
-    filter: blur(1px);
-    border-radius: 20px;
-   
-    min-height: 320px;
+  overflow: scroll;
+  background: linear-gradient( rgba(5, 91, 229, 0.2), rgba(19, 71, 154, 0.2));
+  filter: blur(1px);
+  border-radius: 20px;
+  width: 100px;
+  height: 15%;
+  min-height: 320px;
 }
 
 ::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
+
+.container {
+    background: linear-gradient( rgba(5, 91, 229, 0.654), rgba(19, 71, 154, 0.697));
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    justify-content: center;
+  }
 
 .screenView {
     background-color: rgb(21, 222, 105);

@@ -12,6 +12,7 @@ import { Authorization_window } from './components/Authorization_window/Authoriz
 import { Autorization } from './components/Autorization/Autorization';
 import { Basket } from './components/Basket/Basket';
 import { Profile } from './components/Profile/Profile';
+import { Contacts } from './components/Contacts/Contacts';
 
 //маршрутизация
 const router = createBrowserRouter([
@@ -45,6 +46,12 @@ const router = createBrowserRouter([
     path: "/profile",
     element: <Profile/>
   },
+  {
+    //Контакты
+    path: "/contacts",
+    element: <Contacts/>
+  },
+
  
 ]);
 //--end--//

@@ -1,0 +1,40 @@
+
+.contacts_github {
+    background-image: url(icon/github.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+    border: none; 
+}
+
+.contacts_vk {
+    background-image: url(icon/vk.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+    border: none; 
+}
+
+.contacts_email {
+    background-image: url(icon/email.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+    border: none; 
+}
+
+.contacts_view {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
