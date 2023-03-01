@@ -10,6 +10,8 @@ import {
 import { Registration_window } from './components/Registration_window/Registration_window';
 import { Authorization_window } from './components/Authorization_window/Authorization_window';
 import { Autorization } from './components/Autorization/Autorization';
+import { Basket } from './components/Basket/Basket';
+import { Profile } from './components/Profile/Profile';
 
 //маршрутизация
 const router = createBrowserRouter([
@@ -32,6 +34,16 @@ const router = createBrowserRouter([
     //страница регистрации
     path: "/singup",
     element: <Registration_window/>
+  },
+  {
+    //корзина
+    path: "/basket",
+    element: <Basket/>
+  },
+  {
+    //личный кабинет
+    path: "/profile",
+    element: <Profile/>
   },
  
 ]);

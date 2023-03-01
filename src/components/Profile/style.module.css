@@ -1,0 +1,25 @@
+.profile {
+    overflow: scroll;
+    background: linear-gradient( rgba(5, 91, 229, 0.2), rgba(19, 71, 154, 0.2));
+    filter: blur(1px);
+    border-radius: 20px;
+   
+    min-height: 320px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.screenView {
+    background-color: rgb(21, 222, 105);
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 1fr 9fr 1fr;
+    width: 100%;
+    min-width: 300px;
+    height: 100%;
+    min-height: 500px;
+    grid-column: 3 / 8;
+  }

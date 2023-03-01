@@ -5,7 +5,9 @@
     margin-bottom: 10px;
     border-radius: 20px;
     width: 90%;
-    height: 30%;
+    height: 10%;
+    min-height: 65px;
+    max-height: 65px;
     margin-top: 10px;
     
 }
@@ -42,6 +44,17 @@
 
 .button_user {
     background-image: url(icon/user.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+    border: none; 
+}
+
+.button_basket {
+    background-image: url(icon/basket.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: rgb(255, 255, 255, 0);

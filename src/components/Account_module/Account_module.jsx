@@ -10,8 +10,10 @@ export function Account_module() {
     return (
          <div className={style.account_module}>
             <div className={style.button_view}>
-                <button className={style.button_user} onClick={() => navigate("/user")}></button> 
-                <button className={style.button_exit} onClick={() => navigate("/")}></button> 
+                <button className={style.button_user} onClick={() => navigate("/profile")}></button> 
+                <button className={style.button_basket} onClick={() => navigate("/basket")}></button>
+                <button className={style.button_exit} onClick={() => navigate("/")}></button>
+
          </div>
         </div>
     )   
