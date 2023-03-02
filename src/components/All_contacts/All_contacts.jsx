@@ -3,6 +3,7 @@ import style from './style.module.css'
 // import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import { Contacts_view } from '../Contacts_view/Contacts_view';
+import { Products } from '../Products/Products';
 
 export function All_contacts() {
 
@@ -20,9 +21,11 @@ export function All_contacts() {
         <>
             {contactsModal}
             <div className={style.all_contacts_view}>
+                 <Products /> 
                 <button className={style.all_contacts} onClick={() => {
                 setContacts_view(!openContacts_view);
-                }}></button> 
+                }}></button>
+               
             </div>
         </>
     )   
