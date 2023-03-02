@@ -9,7 +9,7 @@ export function Profile() {
             <div className={style.screenView}>
                 <Header />
                     <div className={style.profile}>
-
+                        <h1>Личный кабинет</h1>
                     </div>
                 <Footer />
             </div> 

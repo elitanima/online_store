@@ -1,15 +1,4 @@
 
-.contacts_contacts {
-    background-image: url(icon/contacts.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-color: rgb(255, 255, 255, 0);
-    width: 35px;
-    height: 35px;
-    filter: invert(1);
-    border: none; 
-}
-
 .contacts_github {
     background-image: url(icon/github.png);
     background-repeat: no-repeat;

@@ -1,0 +1,94 @@
+
+.сontacts_module{
+    display: grid;
+    justify-content: center;
+    /* align-items: center; */
+    /* grid-column: 2 / 3; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(130, 118, 122, 0.5); */
+}
+
+.contacts_view_module {
+    /* background-color: brown; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align:center
+}
+/* .qr_test {
+    background-color: blue;
+      grid-column: 3 / 4;
+} */
+
+.contacts_github_qr {
+    
+}
+
+.contacts_github {
+    background-image: url(/src/components/Contacts/icon/github.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+    border: none; 
+}
+
+.contacts_vk {
+    background-image: url(/src/components/Contacts/icon/vk.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+    border: none; 
+}
+
+.contacts_telegram {
+    background-image: url(/src/components/Contacts/icon/telegram.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+    border: none; 
+}
+
+.contacts_email {
+    background-image: url(/src/components/Contacts/icon/email.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+    border: none; 
+}
+
+/* qr коды как идея для внедрения в модульное окно контактов */
+
+/* .contacts_github_qr {
+    background-image: url(/src/components/Contacts_view/Contacts_module/qr_code/qr_code_github.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 100px;
+    height: 100px;
+    filter: invert(1);
+    border: none; 
+} */
+
+h4 {
+    margin: 0;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}

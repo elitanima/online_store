@@ -8,22 +8,10 @@ export function Contacts() {
 
     // const navigate = useNavigate();
 
-    //модальное окно контакты
-    const [openContacts_view, setContacts_view] = useState();
-    let contactsModal;
-    if (openContacts_view){ 
-        contactsModal = <Contacts_view openContacts_view={openContacts_view} setContacts_view={setContacts_view} />
-      }
-    // --END--
-
     return (
         <>
-            {contactsModal}
             <div className={style.contacts_view}>
-                <button className={style.contacts_contacts} onClick={() => {
-                setContacts_view(!openContacts_view);
-                }}></button> 
-                
+
                 <a href="https://github.com/elitanima" >
                 <button className={style.contacts_github} ></button> 
                 </a>

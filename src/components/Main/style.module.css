@@ -1,11 +1,12 @@
 .main {
     overflow: scroll;
     background: linear-gradient( rgba(5, 91, 229, 0.2), rgba(19, 71, 154, 0.2));
-    filter: blur(1px);
+    /* filter: blur(1px); */
     border-radius: 20px;
     /* width: 100px;
     height: 15%; */
     min-height: 320px;
+    text-align: center;
 }
 
 ::-webkit-scrollbar {
