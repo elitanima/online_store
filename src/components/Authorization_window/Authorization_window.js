@@ -1,4 +1,4 @@
-//singin авторизация
+//signin авторизация
 
 import style from './style.module.css'
 

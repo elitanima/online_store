@@ -8,12 +8,14 @@
     left: 0;
     width: 100%;
     height: 100%;
+    
     /* background-color: rgba(130, 118, 122, 0.5); */
 }
 
 .contacts_view_module {
     /* background-color: brown; */
     display: grid;
+    /* grid-template-columns: repeat(auto-fill, 4vw); */
     justify-content: center;
     align-items: center;
     text-align:center

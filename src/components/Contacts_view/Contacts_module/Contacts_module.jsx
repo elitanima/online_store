@@ -31,7 +31,9 @@ export function Contacts_module() {
                 <button className={style.contacts_github_qr} ></button>
                 </a>
             </div> */}
+            
         </div>
+        
         
         </>
     )   

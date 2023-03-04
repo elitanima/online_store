@@ -1,5 +1,5 @@
 
-//Singup регистрация пользователя
+//Signup регистрация пользователя
 
 import style from './style.module.css';
 
