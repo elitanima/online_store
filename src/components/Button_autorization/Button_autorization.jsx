@@ -11,8 +11,8 @@ export function Button_autorization(){
     return (
       <>
          <div className={style.button_view}>
-           <button className={style.button} onClick={() => navigate("/singin")}>Вход</button> 
-           <button className={style.button} onClick={() => navigate("/singup")}>Регистрация</button> 
+           <button className={style.button} onClick={() => navigate("/signin")}>Вход</button> 
+           <button className={style.button} onClick={() => navigate("/signup")}>Регистрация</button> 
          </div>
       </>
     )   

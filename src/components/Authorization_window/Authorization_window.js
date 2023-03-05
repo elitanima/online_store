@@ -8,17 +8,27 @@ import { Formik, Field, Form } from "formik";
 
 import { useNavigate } from "react-router-dom";
 
+import { signin } from "../../api_user/api_user"
+
 
 export function Authorization_window() {
 
     const navigate = useNavigate();
+
+     // После авторизации отрываем главную страницу
+     const goToMain = () => {
+        return navigate("/main")
+    }
+
+    
    
     return (
         <Formik
         initialValues={{ email: "", password: ""}}
         onSubmit={async (values) => {
-          await new Promise((resolve) => setTimeout(resolve, 500));
-          alert(JSON.stringify(values, null, 2));
+            await new Promise((resolve) => setTimeout(resolve, 500));
+            signin(values);
+            goToMain();
         }}
       >
             <div className={style.hidden}>

@@ -28,12 +28,12 @@ const router = createBrowserRouter([
   },
   {
     //страница входа
-    path: "/singin",
+    path: "/signin",
     element: <Authorization_window/>
   },
   {
     //страница регистрации
-    path: "/singup",
+    path: "/signup",
     element: <Registration_window/>
   },
   {
