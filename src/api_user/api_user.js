@@ -13,9 +13,10 @@ export const signup = async (newUser) => {
     if (res.ok) {
         return true;
     } else {
+        console.log("WARNING");
         const response = await res.json();
         throw new Error(response.message);
-
+        
     }
 }
 

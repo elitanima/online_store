@@ -73,4 +73,8 @@ span:hover {
     transform: scale(103%)
 }
 
-
+/* Ошибка пустоты в форме регистрации */
+.error::placeholder {
+    color: rgb(195, 7, 7);
+    font-size: 15px;  
+}
