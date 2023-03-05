@@ -15,14 +15,21 @@ export function Authorization_window() {
 
     const navigate = useNavigate();
 
-    const [viewGrid, setViewGrid] = useState(false);
+    const [valid, setValid] = useState(false);
 
      // После авторизации отрываем главную страницу
      const goToMain = () => {
         return navigate("/main")
     }
 
-    
+    // Анимация валидации
+    function validAnim() {
+        setValid(!valid)
+    }
+    function animaForm() {
+        setTimeout(validAnim, 500);
+    }
+    // --END--
    
     return (
         <Formik
@@ -30,10 +37,11 @@ export function Authorization_window() {
         onSubmit={async (values) => {
             
             if (values.email && values.password){
-                signin(values);
+                await signin(values);
                 goToMain();
+                
             } else {
-                console.log('Ошибка');
+                animaForm();
             }
             
         }}
@@ -42,9 +50,9 @@ export function Authorization_window() {
                 <div className={style.end_modal_avtorization}>  
                     <div className={style.modal}>
                         <Form className={style.form_avtorization} >
-                                <Field className={`${style.form_data} ${viewGrid ? style.error : ''}`} name="email"  type="email" placeholder="Email"/>
-                                <Field className={`${style.form_data} ${viewGrid ? style.error : ''}`} name="password" type="password" placeholder="Пароль" />
-                                <button className={style.form_data} type="submit" onClick={() =>setViewGrid(!viewGrid)}>Войти</button>
+                                <Field className={`${style.form_data} ${valid ? style.error : ''}`} name="email"  type="email" placeholder="Email"/>
+                                <Field className={`${style.form_data} ${valid ? style.error : ''}`} name="password" type="password" placeholder="Пароль" />
+                                <button className={style.form_data} type="submit" onClick={() =>setValid(!valid)}>Войти</button>
                                 <span className={style.form_data} data-btn="formAutorizationClose" onClick={() => navigate("/")}>Отмена</span>
                         </Form>
                     </div>
