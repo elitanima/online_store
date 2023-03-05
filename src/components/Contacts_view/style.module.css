@@ -15,9 +15,11 @@
 .modal {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 350px;
-    height: 350px;
+    /* grid-template-columns: (200px, 50px); */
+    grid-template-columns: 15em 3em;
+    /* grid-template-rows: 10em 4.5em; */
+    width: 290px;
+    height: 290px;
     background: linear-gradient( rgba(5, 91, 229, 0.9), rgba(19, 71, 154, 0.9));
     box-shadow: 
         0 0 10px rgb(255, 255, 255),
@@ -41,8 +43,16 @@
     filter: invert(1);
 }
 
+.button_close_grid {
+    grid-column: 2 / 3;
+}
+
+.contact_grid {
+    
+}
+
 .close_module {
-    grid-column: 3 / 4;
+    
 }
 
 span:active {

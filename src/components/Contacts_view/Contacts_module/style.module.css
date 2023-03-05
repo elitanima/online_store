@@ -1,32 +1,9 @@
 
-.сontacts_module{
-    display: grid;
-    justify-content: center;
-    /* align-items: center; */
-    /* grid-column: 2 / 3; */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    /* background-color: rgba(130, 118, 122, 0.5); */
-}
-
 .contacts_view_module {
     /* background-color: brown; */
-    display: grid;
-    /* grid-template-columns: repeat(auto-fill, 4vw); */
-    justify-content: center;
-    align-items: center;
-    text-align:center
-}
-/* .qr_test {
-    background-color: blue;
-      grid-column: 3 / 4;
-} */
-
-.contacts_github_qr {
-    
+    /* display: grid;
+    grid-template-columns: repeat(1, 1fr); */
+    text-align:center;
 }
 
 .contacts_github {

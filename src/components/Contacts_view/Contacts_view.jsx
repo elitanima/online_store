@@ -13,11 +13,11 @@ export function Contacts_view( { openContacts_view, setContacts_view }) {
     return (
         <div className={style.end_modal}>  
              <div className={style.modal}>
-                <div>
+                <div className={style.contact_grid}>
                     <Contacts_module />
                 </div>
                 
-                <div className={style.close_module}>
+                <div className={style.button_close_grid}>
                     <span className={style.button_close} onClick={() => { setContacts_view(!openContacts_view) }}></span>
                 </div>
                        
