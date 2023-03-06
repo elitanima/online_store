@@ -34,6 +34,7 @@ export const signin = async (valuesSignIn) => {
     if (res.ok) {
         const response = await res.json();
         localStorage.setItem('token', response.token);
+        console.log(response);
 
         return true;
     } else {
@@ -41,5 +42,17 @@ export const signin = async (valuesSignIn) => {
         throw new Error(response.message);
 
     }
-
 }
+
+// Информация о пользователе
+export const user = (token) => {
+    return fetch('https://api.react-learning.ru/v2/9-gr/users/me', {   
+        method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+            }, 
+    })
+}
+

@@ -27,7 +27,7 @@ export function Authorization_window() {
         setValid(!valid)
     }
     function animaForm() {
-        setTimeout(validAnim, 500);
+        setTimeout(validAnim, 100);
     }
     // --END--
    
