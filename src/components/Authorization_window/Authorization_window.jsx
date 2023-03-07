@@ -3,7 +3,7 @@
 import style from './style.module.css'
 
 import React from "react";
-import ReactDOM from "react-dom";
+
 import { Formik, Field, Form } from "formik";
 import { useState } from 'react'
 import { useNavigate } from "react-router-dom";
@@ -18,7 +18,7 @@ export function Authorization_window() {
     const [valid, setValid] = useState(false);
 
      // После авторизации отрываем главную страницу
-     const goToMain = () => {
+    const goToMain = () => {
         return navigate("/main")
     }
 
@@ -34,15 +34,21 @@ export function Authorization_window() {
     return (
         <Formik
         initialValues={{ email: "", password: ""}}
+        //Валидация формы авторизации и вывод ошибок сервера
         onSubmit={async (values) => {
-            
-            if (values.email && values.password){
-                await signin(values);
-                goToMain();
-                
-            } else {
-                animaForm();
+            try {
+                if (values.email && values.password){
+                    await signin(values);
+                    goToMain();
+                    
+                } else {
+                    animaForm();
+                }
+            } catch (error) {
+                //Сделать вывод ошибок видимым пользователю!!!
+                console.log(error);
             }
+           
             
         }}
       >
