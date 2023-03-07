@@ -36,14 +36,21 @@ export function Registration_window() {
     return (
         <Formik
             initialValues={{ email: "", password: "", group: ""}}
+            //Валидация формы регистрации и вывод ошибок сервера
             onSubmit={async (values) => {
                 // проверка на пустоту формы
-                if (values.email && values.password && values.group){
-                    await signup(values);
-                    goToSignIn();
-                } else {
-                    animaForm()
+                try {
+                    if (values.email && values.password && values.group){
+                        await signup(values);
+                        goToSignIn();
+                    } else {
+                        animaForm()
+                    }
+                } catch (error) {
+                     //Сделать вывод ошибок видимым пользователю!!!
+                    console.log(error)
                 }
+               
             }}>
             <div className={style.hidden}>
                 <div className={style.end_modal_registration}>  

@@ -37,6 +37,7 @@ export function Authorization_window() {
         //Валидация формы авторизации и вывод ошибок сервера
         onSubmit={async (values) => {
             try {
+                // проверка на пустоту формы
                 if (values.email && values.password){
                     await signin(values);
                     goToMain();
