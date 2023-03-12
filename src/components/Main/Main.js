@@ -30,8 +30,11 @@ export function Main() {
 
     return (
         <section className={style.main}>
-            <h1>Главный экран</h1>
-            {data.products.map(oneProduct => <div>{oneProduct.name}</div>)}
+            {data.products.map(oneProduct =>
+                <div className={style.card}>
+                    <p> {oneProduct.name} </p>
+                </div>
+            )}
         </section>
     )   
 }
