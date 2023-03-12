@@ -1,4 +1,4 @@
-import { Account_module } from '../Account_module/Account_module'
+import { AccountButton } from '../AccountButton/AccountButton'
 import { Footer } from '../Footer/Footer'
 import { Header } from '../Header/Header'
 import style from './style.module.css'
@@ -14,7 +14,7 @@ export function Basket() {
                 <Footer />
             </div> 
             <div className='authorization'>
-                    <Account_module />
+                    <AccountButton />
             </div>
         </div>
     )   

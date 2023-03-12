@@ -7,12 +7,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { Registration_window } from './components/Registration_window/Registration_window';
-import { Authorization_window } from './components/Authorization_window/Authorization_window';
+import { RegistrationWindow } from './components/RegistrationWindow/RegistrationWindow';
+import { AuthorizationWindow } from './components/AuthorizationWindow/AuthorizationWindow';
 import { Autorization } from './components/Autorization/Autorization';
 import { Basket } from './components/Basket/Basket';
 import { Profile } from './components/Profile/Profile';
-import { Contacts_view } from './components/Contacts_view/Contacts_view';
+
 
 //маршрутизация
 const router = createBrowserRouter([
@@ -29,12 +29,12 @@ const router = createBrowserRouter([
   {
     //страница входа
     path: "/signin",
-    element: <Authorization_window/>
+    element: <AuthorizationWindow/>
   },
   {
     //страница регистрации
     path: "/signup",
-    element: <Registration_window/>
+    element: <RegistrationWindow/>
   },
   {
     //корзина
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
   // {
   //   //Контакты
   //   path: "/contacts",
-  //   element: <Contacts_view/>
+  //   element: <ButtonClose/>
   // },
 
  

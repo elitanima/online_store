@@ -8,10 +8,10 @@ import { Formik, Field, Form } from "formik";
 import { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 
-import { signin } from "../../api_user/api_user"
+import { signin } from "../../api/user"
 
 
-export function Authorization_window() {
+export function AuthorizationWindow() {
 
     const navigate = useNavigate();
 
@@ -56,7 +56,7 @@ export function Authorization_window() {
             <div className={style.hidden}>
                 <div className={style.end_modal_avtorization}>  
                     <div className={style.modal}>
-                        <Form className={style.form_avtorization} >
+                        <Form className={style.FormAvtorization} >
                                 <Field className={`${style.form_data} ${valid ? style.error : ''}`} name="email"  type="email" placeholder="Email"/>
                                 <Field className={`${style.form_data} ${valid ? style.error : ''}`} name="password" type="password" placeholder="Пароль" />
                                 <button className={style.form_data} type="submit" onClick={() =>setValid(!valid)}>Войти</button>

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-export function Account_module() {
+export function AccountButton() {
     
     const navigate = useNavigate();
    
@@ -16,7 +16,7 @@ export function Account_module() {
     }
 
     return (
-         <div className={style.account_module}>
+         <div className={style.AccountButton}>
             <div className={style.button_view}>
                 <button className={style.button_user} onClick={() => navigate("/profile")}></button> 
                 <button className={style.button_basket} onClick={() => navigate("/basket")}></button>

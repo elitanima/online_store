@@ -3,13 +3,13 @@
 import style from './style.module.css'
 
 
-export function Contacts_module() {
+export function Modal() {
 
     return (
         
          
-                <div >
-                <div className={style.contacts_view_module}>
+                
+                <div className={style.button_close_modal}>
                     <a href="https://github.com/elitanima" >
                     <h4>Github</h4>
                     <button className={style.contacts_github} ></button>
@@ -27,12 +27,7 @@ export function Contacts_module() {
                     <button className={style.contacts_email}></button>
                     </a>
                 </div>
-                </div>
-        
-            
-        
-        
-        
+                
     
     )   
 }

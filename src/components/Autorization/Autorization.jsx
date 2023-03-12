@@ -1,5 +1,5 @@
 
-import { Button_autorization } from '../Button_autorization/Button_autorization'
+import { ButtonAutorization } from '../ButtonAutorization/ButtonAutorization'
 import style from './style.module.css'
 
 export function Autorization() {
@@ -8,7 +8,7 @@ export function Autorization() {
         <div className={style.end_modal}>
              <div className={style.modal}>
                 <div className={style.autorization}>
-                <Button_autorization />
+                <ButtonAutorization />
                 </div>
             </div>
         </div>

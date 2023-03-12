@@ -1,8 +1,9 @@
-import { Account_module } from '../Account_module/Account_module'
+
 import { Footer } from '../Footer/Footer'
 import { Header } from '../Header/Header'
-import { user } from "../../api_user/api_user"
+import { user } from "../../api/user"
 import style from './style.module.css'
+import { AccountButton } from '../AccountButton/AccountButton'
 
 export function Profile() {
 
@@ -38,7 +39,7 @@ let profilePage = (data) =>
                 <Footer />
             </div> 
             <div className='authorization'>
-                    <Account_module />
+                    <AccountButton />
             </div>
         </div>
     )   

@@ -29,7 +29,7 @@
 }
 
 
-.button_close {
+.ButtonClose {
     background-image: url(icon/close.png);
     width: 30px;
     height: 30px;
@@ -43,7 +43,7 @@
     filter: invert(1);
 }
 
-.button_close_grid {
+.ButtonClose_grid {
     grid-column: 2 / 3;
 }
 

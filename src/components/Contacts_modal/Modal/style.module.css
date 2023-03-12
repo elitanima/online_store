@@ -1,5 +1,5 @@
 
-.contacts_view_module {
+.button_close_modal {
     /* background-color: brown; */
     /* display: grid;
     grid-template-columns: repeat(1, 1fr); */
@@ -53,7 +53,7 @@
 /* qr коды как идея для внедрения в модульное окно контактов */
 
 /* .contacts_github_qr {
-    background-image: url(/src/components/Contacts_view/Contacts_module/qr_code/qr_code_github.png);
+    background-image: url(/src/components/ButtonClose/Modal/qr_code/qr_code_github.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: rgb(255, 255, 255, 0);

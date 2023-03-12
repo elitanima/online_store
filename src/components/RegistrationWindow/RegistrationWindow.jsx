@@ -9,10 +9,10 @@ import { useState } from 'react'
 import React from "react";
 import ReactDOM from "react-dom";
 import { Formik, Field, Form } from "formik";
-import { signup } from "../../api_user/api_user"
+import { signup } from "../../api/user"
 
 
-export function Registration_window() {
+export function RegistrationWindow() {
 
     const navigate = useNavigate();
 
@@ -55,7 +55,7 @@ export function Registration_window() {
             <div className={style.hidden}>
                 <div className={style.end_modal_registration}>  
                     <div className={style.modal}>
-                        <Form className={style.form_avtorization} >
+                        <Form className={style.FormAvtorization} >
                                 <Field className={`${style.form_data} ${valid ? style.error : ''}`} name="email"  type="email" placeholder="Email"/>
                                 <Field className={`${style.form_data} ${valid ? style.error : ''}`} name="password" type="password" placeholder="Придумайте пароль" />
                                 <Field className={`${style.form_data} ${valid ? style.error : ''}`} name="group" type="text" placeholder="Группа" />

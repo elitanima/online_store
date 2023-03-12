@@ -4,7 +4,7 @@ import style from './style.module.css'
 import { useNavigate } from "react-router-dom";
 
 
-export function Button_autorization(){
+export function ButtonAutorization(){
 
   const navigate = useNavigate();
  

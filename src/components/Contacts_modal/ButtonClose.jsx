@@ -1,12 +1,12 @@
 //страница отображения контактов
 
-import { Contacts_module } from './Contacts_module/Contacts_module'
+import { Modal } from './Modal/Modal'
 import style from './style.module.css'
 
 // import { useNavigate } from "react-router-dom";
 
 
-export function Contacts_view( { openContacts_view, setContacts_view }) {
+export function ButtonClose( { openButtonClose, setButtonClose }) {
 
     // const navigate = useNavigate();
 
@@ -14,11 +14,11 @@ export function Contacts_view( { openContacts_view, setContacts_view }) {
         <div className={style.end_modal}>  
              <div className={style.modal}>
                 <div className={style.contact_grid}>
-                    <Contacts_module />
+                    <Modal />
                 </div>
                 
-                <div className={style.button_close_grid}>
-                    <span className={style.button_close} onClick={() => { setContacts_view(!openContacts_view) }}></span>
+                <div className={style.ButtonClose_grid}>
+                    <span className={style.ButtonClose} onClick={() => { setButtonClose(!openButtonClose) }}></span>
                 </div>
                        
             </div>

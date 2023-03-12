@@ -1,4 +1,4 @@
-.account_module {
+.AccountButton {
     display: flex;
     align-content: center;
     align-items: center;
@@ -70,12 +70,12 @@
 
 /* media Adaptive */
 @media (max-width: 749px) {
-    .account_module {
+    .AccountButton {
         height: 120px;
     }
 }
 @media (max-width: 473px) {
-    .account_module {
+    .AccountButton {
         height: 160px;
         min-width: 60px;
     }
