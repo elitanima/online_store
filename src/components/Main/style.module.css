@@ -8,7 +8,7 @@
     min-height: 320px;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(auto-fill, 250px);
     justify-content: center;
 }
 
@@ -25,7 +25,8 @@
         0 0 5px rgb(255, 255, 255),
         0 0 10px rgb(255, 255, 255);  
     border-radius: 20px;
-    margin: 20px;
+    margin: 10px;
     color: antiquewhite;
+    height: 350px;
 }
 

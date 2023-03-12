@@ -1,6 +1,7 @@
 
-import style from './style.module.css'
 import { AllСontacts } from '../AllСontacts/AllСontacts'
+import style from './style.module.css'
+
 
 
 export function Header() {
