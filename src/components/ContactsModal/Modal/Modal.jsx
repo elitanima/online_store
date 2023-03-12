@@ -6,9 +6,6 @@ import style from './style.module.css'
 export function Modal() {
 
     return (
-        
-         
-                
                 <div className={style.button_close_modal}>
                     <a href="https://github.com/elitanima" >
                     <h4>Github</h4>
@@ -26,8 +23,6 @@ export function Modal() {
                     <h4>Почта</h4>
                     <button className={style.contacts_email}></button>
                     </a>
-                </div>
-                
-    
+                </div>  
     )   
 }

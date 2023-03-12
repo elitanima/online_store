@@ -10,7 +10,7 @@ body {
     justify-content: center;
   }
   
-  .screenView {
+  .screen_view {
     /* background-color: rgb(21, 222, 105); */
     display: grid;
     gap: 10px;

@@ -2,10 +2,10 @@
 import style from './style.module.css'
 // import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
-import { ButtonClose } from '../Contacts_modal/ButtonClose';
-import { Products } from '../Products/Products';
+import { ButtonClose } from '../ContactsModal/ButtonClose';
+import { ProductsButton } from '../ProductsButton/ProductsButton';
 
-export function All_contacts() {
+export function AllСontacts() {
 
     // const navigate = useNavigate();
 
@@ -20,8 +20,8 @@ export function All_contacts() {
     return (
         <>
             {Modal}
-            <div className={style.all_ButtonClose}>
-                 <Products /> 
+            <div className={style.all_button_close}>
+                 <ProductsButton /> 
                 <button className={style.all_contacts} onClick={() => {
                 setButtonClose(!openButtonClose);
                 }}></button>

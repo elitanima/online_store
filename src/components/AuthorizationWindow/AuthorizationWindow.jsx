@@ -56,12 +56,27 @@ export function AuthorizationWindow() {
             <div className={style.hidden}>
                 <div className={style.end_modal_avtorization}>  
                     <div className={style.modal}>
-                        <Form className={style.FormAvtorization} >
-                                <Field className={`${style.form_data} ${valid ? style.error : ''}`} name="email"  type="email" placeholder="Email"/>
-                                <Field className={`${style.form_data} ${valid ? style.error : ''}`} name="password" type="password" placeholder="Пароль" />
-                                <button className={style.form_data} type="submit" onClick={() =>setValid(!valid)}>Войти</button>
-                                <span className={style.form_data} data-btn="formAutorizationClose" onClick={() => navigate("/")}>Отмена</span>
-                        </Form>
+                        <Form >
+                                <Field  className={`${style.form_data} ${valid ? style.error : ''}`} 
+                                        name="email"  
+                                        type="email" 
+                                        placeholder="Email"/>
+                                <Field  className={`${style.form_data} ${valid ? style.error : ''}`} 
+                                        name="password" 
+                                        type="password" 
+                                        placeholder="Пароль" />
+                                <button className={style.form_data} 
+                                        type="submit" 
+                                        onClick={() =>setValid(!valid)}
+                                        >
+                                            Войти
+                                </button>
+                                <span   className={style.form_data} 
+                                        onClick={() => navigate("/")}
+                                        >
+                                            Отмена
+                                </span>
+                        </Form >
                     </div>
                 </div>
             </div>

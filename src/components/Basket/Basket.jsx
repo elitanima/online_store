@@ -6,7 +6,7 @@ import style from './style.module.css'
 export function Basket() {
     return (
         <div className={style.container}>
-            <div className={style.screenView}>
+            <div className={style.screen_view}>
                 <Header />
                     <div className={style.basket}>
                         <h1>Корзина</h1>

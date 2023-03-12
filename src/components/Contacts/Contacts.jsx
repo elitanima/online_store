@@ -2,7 +2,7 @@
 import style from './style.module.css'
 // import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
-import { ButtonClose } from '../Contacts_modal/ButtonClose';
+import { ButtonClose } from '../ContactsModal/ButtonClose';
 
 export function Contacts() {
 
@@ -10,7 +10,7 @@ export function Contacts() {
 
     return (
         <>
-            <div className={style.ButtonClose}>
+            <div className={style.button_close}>
 
                 <a href="https://github.com/elitanima" >
                 <button className={style.contacts_github} ></button> 

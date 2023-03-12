@@ -1,6 +1,6 @@
 
 import style from './style.module.css'
-import { All_contacts } from '../All_contacts/All_contacts'
+import { AllСontacts } from '../AllСontacts/AllСontacts'
 
 
 export function Header() {
@@ -9,7 +9,7 @@ export function Header() {
 
     return (
         <header className={style.header}>
-           <All_contacts />
+           <AllСontacts />
         </header>
     )   
 }

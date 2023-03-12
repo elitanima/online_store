@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import { RegistrationWindow } from './components/RegistrationWindow/RegistrationWindow';
 import { AuthorizationWindow } from './components/AuthorizationWindow/AuthorizationWindow';
-import { Autorization } from './components/Autorization/Autorization';
+import { Autorization } from './components/Authorization/Autorization';
 import { Basket } from './components/Basket/Basket';
 import { Profile } from './components/Profile/Profile';
 

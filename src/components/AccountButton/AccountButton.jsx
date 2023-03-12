@@ -16,7 +16,7 @@ export function AccountButton() {
     }
 
     return (
-         <div className={style.AccountButton}>
+         <div className={style.account_button}>
             <div className={style.button_view}>
                 <button className={style.button_user} onClick={() => navigate("/profile")}></button> 
                 <button className={style.button_basket} onClick={() => navigate("/basket")}></button>

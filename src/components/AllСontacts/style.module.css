@@ -11,7 +11,7 @@
     z-index: 3;
 }
 
-.all_ButtonClose {
+.all_button_close {
     width: 100%;
     display: flex;
     justify-content: end;

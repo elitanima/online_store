@@ -43,7 +43,7 @@
     border: none; 
 }
 
-.ButtonClose {
+.button_close {
     width: 100%;
     display: flex;
     justify-content: center;

@@ -1,4 +1,4 @@
-.products {
+.ProductsButton {
     width: 100%;
     display: flex;
     justify-content: end;
@@ -6,7 +6,7 @@
     gap: 20px;
 }
 
-.button_products{
+.button_ProductsButton{
         background-image: url(icon/products.png);
         background-repeat: no-repeat;
         background-size: 100%;

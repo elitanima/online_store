@@ -20,7 +20,7 @@ function App() {
       <div className='promotion_view'>
         <Promotion />
       </div>
-      <div className='screenView'>
+      <div className='screen_view'>
         <Header />
         <Main />  
         <Footer />
