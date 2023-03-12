@@ -1,9 +1,37 @@
+import { useEffect, useState } from 'react'
 import style from './style.module.css'
 
 export function Main() {
+
+    const [data, setData] = useState({products: [], total: 0});
+
+    useEffect(()=> {
+
+        const token = localStorage.getItem('token');
+
+        const fetchData = async ()=>{
+            const res = await fetch('https://api.react-learning.ru/products', {
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }, 
+            })
+            if (res.ok) {
+                const response = await res.json();
+                console.log(response);
+                
+                return setData(response);
+            } 
+                throw new Error('что то пошло не по плану');
+        }
+        fetchData()
+    },[])
+
+
+
     return (
         <section className={style.main}>
             <h1>Главный экран</h1>
+            {data.products.map(oneProduct => <div>{oneProduct.name}</div>)}
         </section>
     )   
 }
