@@ -1,40 +1,51 @@
 
+import { useEffect, useState } from 'react'
 import { Footer } from '../Footer/Footer'
 import { Header } from '../Header/Header'
-import { user } from "../../api/user"
+import { userProfile } from "../../api/user"
 import style from './style.module.css'
 import { AccountButton } from '../AccountButton/AccountButton'
 
 export function Profile() {
 
-   
+    const [data, setData] = useState({});
 
-    const token = localStorage.getItem('token')
 
      // Отрываем страницу профиля
         const goToUser = async (token) => {
-        const res = await user(token);
+        const res = await userProfile(token);
         const data = await res.json();
-        let $profile = document.querySelector('#profile');
-        $profile.insertAdjacentHTML("beforeend", profilePage(data));
+       
     }
-    goToUser(token)
-
-    // формирование html
-let profilePage = (data) => 
-`<div>
-    <h3>${data.name}</h3>
-    <h3>${data.about}</h3>
-    <h3>${data.avatar}</h3>
-</div>`
     
+
+    useEffect(()=> {
+
+        const token = localStorage.getItem('token');
+
+        const fetchData = async ()=>{
+            const res = await userProfile(token);
+            if (res.ok) {
+                const response = await res.json();
+                console.log(response);
+                
+                return setData(response);
+            } 
+                throw new Error('что то пошло не по плану');
+        }
+        fetchData()
+    },[])
+
+
     return (
         <div className={style.container}>
-            <div className={style.screenView}>
+            <div className={style.screen_view}>
                 <Header />
                     <div className={style.profile} id='profile'>
                         <h1>Личный кабинет</h1>
-                    
+                      {data.name}
+                      {data.about}
+                      {data.email}
                     </div>
                 <Footer />
             </div> 

@@ -26,8 +26,6 @@ export function Main() {
         fetchData()
     },[])
 
-
-
     return (
         <section className={style.main}>
             {data.products.map(oneProduct =>

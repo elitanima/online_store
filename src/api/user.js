@@ -45,7 +45,7 @@ export const signin = async (valuesSignIn) => {
 }
 
 // Информация о пользователе
-export const user = (token) => {
+export const userProfile = (token) => {
     return fetch('https://api.react-learning.ru/v2/9-gr/users/me', {   
         method: 'GET',
             headers: {
