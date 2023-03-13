@@ -43,6 +43,9 @@ export function Profile() {
                 <Header />
                     <div className={style.profile} id='profile'>
                         <h1>Личный кабинет</h1>
+                     <div className={style.picture}>
+                    <img alt="" src={data.avatar} />
+                    </div>
                       {data.name}
                       {data.about}
                       {data.email}

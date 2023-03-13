@@ -30,7 +30,15 @@ export function Main() {
         <section className={style.main}>
             {data.products.map(oneProduct =>
                 <div className={style.card}>
+                    
+                    <div className={style.picture}>
+                        <img alt="" src={oneProduct.pictures} />
+                    </div>
                     <p> {oneProduct.name} </p>
+                    <div >
+                        <h3 className={style.normal__price}>{oneProduct.price} ₽</h3>
+                    </div>
+                    <button className={style.btn}>В корзину</button>
                 </div>
             )}
         </section>

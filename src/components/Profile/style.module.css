@@ -36,6 +36,26 @@
     grid-column: 3 / 8;
   }
 
+  .picture img {
+
+    max-width: 80%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+}
+
+.picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 5px;
+}
+
+
     /* media Adaptive */
 @media (max-width: 749px) {
   .screen_view {
