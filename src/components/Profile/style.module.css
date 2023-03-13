@@ -35,3 +35,10 @@
     min-height: 500px;
     grid-column: 3 / 8;
   }
+
+    /* media Adaptive */
+@media (max-width: 749px) {
+  .screen_view {
+    grid-column: 1 / 8;
+  }
+}

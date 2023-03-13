@@ -10,6 +10,7 @@
     min-height: 65px;
     /* max-height: 65px; */
     margin-top: 10px;
+    justify-content: center;
     
 }
 
@@ -70,13 +71,34 @@
 
 /* media Adaptive */
 @media (max-width: 749px) {
-    .AccountButton {
+    .account_button {
         height: 120px;
     }
 }
 @media (max-width: 473px) {
-    .AccountButton {
+    .account_button {
         height: 160px;
-        min-width: 60px;
+        min-width: 50px;
     }
 }
+
+/* @media (max-width: 473px) {
+    .button_exit {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media (max-width: 473px) {
+    .button_user {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media (max-width: 473px) {
+    .button_basket {
+        height: 20px;
+        width: 20px;
+    }
+} */
