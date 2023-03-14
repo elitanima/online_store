@@ -27,7 +27,7 @@ export function Profile() {
             const res = await userProfile(token);
             if (res.ok) {
                 const response = await res.json();
-                console.log(response);
+               
                 
                 return setData(response);
             } 
@@ -36,19 +36,26 @@ export function Profile() {
         fetchData()
     },[])
 
-
-    return (
+     return (
         <div className={style.container}>
             <div className={style.screen_view}>
                 <Header />
                     <div className={style.profile} id='profile'>
                         <h1>Личный кабинет</h1>
-                     <div className={style.picture}>
-                    <img alt="" src={data.avatar} />
-                    </div>
-                      {data.name}
-                      {data.about}
-                      {data.email}
+                        
+                        <div className={style.picture}>
+                            <img alt="" src={data.avatar} />
+                        </div>
+                        <div className={style.user_description}>
+                            <p>Имя</p>
+                            <h2>{data.name}</h2>
+                            <p>Описание</p>
+                            <h4>{data.about}</h4>
+                            <p>Группа</p>
+                            <h4>{data.group}</h4>
+                            <p>Почта</p>
+                            <h4>{data.email}</h4> 
+                        </div>
                     </div>
                 <Footer />
             </div> 
