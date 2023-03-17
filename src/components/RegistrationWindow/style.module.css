@@ -18,10 +18,10 @@
     justify-content: center;
     width: 350px;
     height: auto;
-    background: linear-gradient( rgba(5, 91, 229, 0.9), rgba(19, 71, 154, 0.9));
-    box-shadow: 
-        0 0 10px rgb(255, 255, 255),
-        0 0 20px rgb(255, 255, 255);
+    background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    box-shadow:  
+    0 0 5px rgb(114, 114, 123),
+    0 0 10px rgb(114, 114, 123); 
     border-radius: 30px;
     animation: show 1s ease;
     color: rgb(0, 0, 0);   
@@ -44,6 +44,9 @@ form {
     appearance: none;
     outline:none;
     border: none;
+    box-shadow:  
+    0 0 5px rgb(114, 114, 123),
+    0 0 10px rgb(114, 114, 123); 
 }
 
 .form_data::placeholder {

@@ -20,10 +20,10 @@
     /* grid-template-rows: 10em 4.5em; */
     width: 290px;
     height: 290px;
-    background: linear-gradient( rgba(5, 91, 229, 0.9), rgba(19, 71, 154, 0.9));
-    box-shadow: 
-        0 0 10px rgb(255, 255, 255),
-        0 0 20px rgb(255, 255, 255);
+    background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    box-shadow:  
+    0 0 5px rgb(114, 114, 123),
+    0 0 10px rgb(114, 114, 123);  
     border-radius: 30px;
     color: aliceblue; 
 }
@@ -40,7 +40,7 @@
     appearance: none;
     outline:none;
     border: none;
-    filter: invert(1);
+    /* filter: invert(1); */
 }
 
 .ButtonClose_grid {
