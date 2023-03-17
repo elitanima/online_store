@@ -1,6 +1,6 @@
 .main {
     overflow: scroll;
-    background: linear-gradient( rgba(5, 91, 229, 0.2), rgba(19, 71, 154, 0.2));
+    background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
     /* filter: blur(1px); */
     border-radius: 20px;
     /* width: 100px;
@@ -10,6 +10,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, 250px);
     justify-content: center;
+    box-shadow:  
+    0 0 5px rgb(114, 114, 123),
+    0 0 10px rgb(114, 114, 123);    
 }
 
 ::-webkit-scrollbar {
@@ -21,13 +24,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient( rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
     box-shadow:  
-        0 0 5px rgb(255, 255, 255),
-        0 0 10px rgb(255, 255, 255);  
+        0 0 5px rgb(114, 114, 123),
+        0 0 10px rgb(114, 114, 123);  
     border-radius: 20px;
     margin: 10px;
-    color: antiquewhite;
+    color: rgb(0, 0, 0);
     height: 350px;
+    
 }
 
 .avatar {
@@ -53,6 +58,7 @@
     width: 150px;
     height: 150px;
     margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 .normal__price {
@@ -62,4 +68,18 @@
     align-items: flex-end;
     font-weight: 600;
     font-size: 18px;
+}
+
+.btn_basket {
+        width: 150px;
+        height: 30px;
+        margin: 7px;
+        border-radius: 5px;
+        padding: 0;
+        appearance: none;
+        outline:none;
+        border: none;
+        box-shadow:  
+        0 0 5px rgb(114, 114, 123),
+        0 0 10px rgb(114, 114, 123);  
 }

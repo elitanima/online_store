@@ -2,7 +2,7 @@
     display: flex;
     align-content: center;
     align-items: center;
-    background: linear-gradient( rgba(5, 91, 229, 0.9), rgba(19, 71, 154, 0.9));
+    background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
     margin-bottom: 10px;
     border-radius: 20px;
     width: 90%;
@@ -11,6 +11,9 @@
     /* max-height: 65px; */
     margin-top: 10px;
     justify-content: center;
+    box-shadow:  
+    0 0 5px rgb(114, 114, 123),
+    0 0 10px rgb(114, 114, 123);  
     
 }
 
@@ -43,7 +46,7 @@
     background-color: rgb(255, 255, 255, 0);
     width: 35px;
     height: 35px;
-    filter: invert(1);
+    /* filter: invert(1); */
     border: none; 
 }
 
@@ -54,7 +57,7 @@
     background-color: rgb(255, 255, 255, 0);
     width: 35px;
     height: 35px;
-    filter: invert(1);
+    /* filter: invert(1); */
     border: none; 
 }
 
@@ -65,7 +68,7 @@
     background-color: rgb(255, 255, 255, 0);
     width: 35px;
     height: 35px;
-    filter: invert(1);
+    /* filter: invert(1); */
     border: none; 
 }
 

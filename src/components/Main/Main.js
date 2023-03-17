@@ -38,7 +38,7 @@ export function Main() {
                     <div >
                         <h3 className={style.normal__price}>{oneProduct.price} ₽</h3>
                     </div>
-                    <button className={style.btn}>В корзину</button>
+                    <button className={style.btn_basket}>В корзину</button>
                 </div>
             )}
         </section>
