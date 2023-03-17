@@ -1,0 +1,21 @@
+.button {
+    border: none;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow:  
+    0 0 5px rgb(114, 114, 123),
+    0 0 10px rgb(114, 114, 123); 
+}
+
+.button:active {
+    transform: scale(103%);
+}
+
+.button_view {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+}

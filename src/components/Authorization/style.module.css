@@ -1,0 +1,40 @@
+/* .autorization {
+    display: flex;
+    align-items: center;
+    background-color: rgb(75, 79, 193);
+    margin-bottom: 10px;
+    border-radius: 20px;
+    width: 90%;
+    height: 30%;
+    margin-top: 10px;
+    
+} */
+
+.end_modal{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(64, 102, 217, 0.5);
+    animation: show 1s ease;
+}
+
+.modal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 200px;
+    background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    box-shadow:  
+    0 0 5px rgb(114, 114, 123),
+    0 0 10px rgb(114, 114, 123); 
+    border-radius: 30px;
+    animation: show 1s ease;
+    color: aliceblue;   
+}

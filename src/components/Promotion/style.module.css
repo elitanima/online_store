@@ -1,0 +1,25 @@
+.promotion {
+    overflow: scroll;
+    background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    margin-bottom: 10px;
+    border-radius: 20px;
+    width: 90%;
+    height: 50%;
+    margin-top: 10px;
+    box-shadow:  
+        0 0 5px rgb(114, 114, 123),
+        0 0 10px rgb(114, 114, 123);  
+    
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* media Adaptive */
+@media (max-width: 749px) {
+    .promotion {
+        display: none;
+    }
+}
