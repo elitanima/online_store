@@ -13,9 +13,6 @@ export function Basket() {
                     </div>
                 <Footer />
             </div> 
-            <div className='authorization'>
-                    <AccountButton />
-            </div>
         </div>
     )   
 }

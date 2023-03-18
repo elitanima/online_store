@@ -3,26 +3,40 @@
 
 import style from './style.module.css';
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useState } from 'react'
 import React from "react";
 import ReactDOM from "react-dom";
-import { Formik, Field, Form } from "formik";
+import { Formik, Field, Form, ErrorMessage } from "formik";
 import { signup } from "../../api/user"
+import * as Yup from 'yup';
 
+const SignUpSchema = Yup.object().shape({
+    password: Yup.string()
+      .min(2, 'Хотя бы больше 1 символа!')
+      .max(10, 'Не больше 10 символов')
+      .required('Придумайте пароль'),
+    group: Yup.string()
+      .min(2, 'Минимум 2 символа!')
+      .max(10, 'Не больше 10 символов!')
+      .required('Введите группу'),
+    email: Yup.string().email('Неверный адрес').required('Введите почту'),
+  });
 
 export function RegistrationWindow() {
+
+    const initialValues = {
+        password: '',
+        email: '',
+        group: '9-gr'
+      }
 
     const navigate = useNavigate();
 
     const [valid, setValid] = useState(false);
 
-    // После регистрации отрываем страницу авторизации
-    const goToSignIn = () => {
-        return navigate("/signin")
-    }
-    // --END--
+
 
      // Анимация валидации
      function validAnim() {
@@ -35,17 +49,15 @@ export function RegistrationWindow() {
 
     return (
         <Formik
-            initialValues={{ email: "", password: "", group: ""}}
+            initialValues={{ email: "", password: "", group: "9-gr"}}
+            validationSchema={SignUpSchema}
             //Валидация формы регистрации и вывод ошибок сервера
             onSubmit={async (values) => {
                 // проверка на пустоту формы
                 try {
-                    if (values.email && values.password && values.group){
                         await signup(values);
-                        goToSignIn();
-                    } else {
-                        animaForm()
-                    }
+                        navigate("/signin")
+                   
                 } catch (error) {
                      //Сделать вывод ошибок видимым пользователю!!!
                     console.log(error)
@@ -56,29 +68,33 @@ export function RegistrationWindow() {
                 <div className={style.end_modal_registration}>  
                     <div className={style.modal}>
                         <Form className={style.FormAvtorization} >
-                                <Field  className={`${style.form_data} ${valid ? style.error : ''}`} 
+                                <Field  className={`${style.form_data}`} 
                                         name="email"  
                                         type="email" 
                                         placeholder="Email"/>
-                                <Field  className={`${style.form_data} ${valid ? style.error : ''}`} 
+                                    <ErrorMessage name="email" />
+                                <Field  className={`${style.form_data}`} 
                                         name="password" 
                                         type="password" 
                                         placeholder="Придумайте пароль" />
-                                <Field  className={`${style.form_data} ${valid ? style.error : ''}`} 
+                                    <ErrorMessage name="password" />
+                                <Field  className={`${style.form_data}`} 
                                         name="group" 
                                         type="text" 
                                         placeholder="Группа" />
-                                <button className={style.form_data} 
+                                    <ErrorMessage name="group" />
+                                <button className={style.form_btn} 
                                         type="submit"
                                         onClick={() =>setValid(!valid)}
                                         >
                                             Регистрация
                                 </button>
-                                <span   className={style.form_data} 
-                                        onClick={() => navigate(-1)}
+                                <span   className={style.form_btn} 
+                                        onClick={() => navigate('/')}
                                         >
                                             Отмена
                                 </span>
+                                <p>Есть аккаут? <Link to={"/signin"} className={style.btn} >Войти</Link> </p>
                         </Form>
                     </div>
                 </div>

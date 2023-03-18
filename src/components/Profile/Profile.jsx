@@ -59,9 +59,6 @@ export function Profile() {
                     </div>
                 <Footer />
             </div> 
-            <div className='authorization'>
-                    <AccountButton />
-            </div>
         </div>
     )   
 }

@@ -17,16 +17,13 @@ function App() {
 
   return (
     <div className='container'>
-      <div className='promotion_view'>
+      {/* <div className='promotion_view'>
         <Promotion />
-      </div>
+      </div> */}
       <div className='screen_view'>
         <Header />
         <Main />  
         <Footer />
-      </div>
-      <div className='authorization'>
-       <AccountButton/>
       </div>
     </div>
    

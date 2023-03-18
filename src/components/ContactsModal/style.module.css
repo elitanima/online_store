@@ -20,16 +20,17 @@
     /* grid-template-rows: 10em 4.5em; */
     width: 290px;
     height: 290px;
-    background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    background: rgba(255, 255, 255, 1);
     box-shadow:  
     0 0 5px rgb(114, 114, 123),
     0 0 10px rgb(114, 114, 123);  
     border-radius: 30px;
-    color: aliceblue; 
+   
 }
 
 
 .ButtonClose {
+    background-color: white;
     background-image: url(icon/close.png);
     width: 30px;
     height: 30px;

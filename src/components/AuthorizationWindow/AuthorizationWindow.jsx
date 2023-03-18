@@ -4,70 +4,55 @@ import style from './style.module.css'
 
 import React from "react";
 
-import { Formik, Field, Form } from "formik";
+import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useState } from 'react'
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import * as Yup from 'yup';
 import { signin } from "../../api/user"
 
+const SignInSchema = Yup.object().shape({
+    password: Yup.string()
+      .min(2, 'Хотя бы больше 1 символа!')
+      .max(10, 'Не больше 10 символов!')
+      .required('Введите пароль'),
+    email: Yup.string().email('Неверный адрес').required('Введите почту'),
+  });
 
 export function AuthorizationWindow() {
 
     const navigate = useNavigate();
 
-    const [valid, setValid] = useState(false);
-
-     // После авторизации отрываем главную страницу
-    const goToMain = () => {
-        return navigate("/main")
-    }
-
-    // Анимация валидации
-    function validAnim() {
-        setValid(!valid)
-    }
-    function animaForm() {
-        setTimeout(validAnim, 100);
-    }
-    // --END--
-   
     return (
         <Formik
         initialValues={{ email: "", password: ""}}
         //Валидация формы авторизации и вывод ошибок сервера
+        validationSchema={SignInSchema}
         onSubmit={async (values) => {
             try {
-                // проверка на пустоту формы
-                if (values.email && values.password){
                     await signin(values);
-                    goToMain();
-                    
-                } else {
-                    animaForm();
-                }
+                    navigate("/main")        
             } catch (error) {
                 //Сделать вывод ошибок видимым пользователю!!!
                 console.log(error);
             }
-           
-            
         }}
       >
             <div className={style.hidden}>
                 <div className={style.end_modal_avtorization}>  
                     <div className={style.modal}>
                         <Form >
-                                <Field  className={`${style.form_data} ${valid ? style.error : ''}`} 
+                                <Field  className={`${style.form_data}`} 
                                         name="email"  
                                         type="email" 
                                         placeholder="Email"/>
-                                <Field  className={`${style.form_data} ${valid ? style.error : ''}`} 
+                                        <ErrorMessage name="email" />
+                                <Field  className={`${style.form_data}`} 
                                         name="password" 
                                         type="password" 
                                         placeholder="Пароль" />
+                                        <ErrorMessage name="password" />
                                 <button className={style.form_data} 
-                                        type="submit" 
-                                        onClick={() =>setValid(!valid)}
+                                        type="submit"
                                         >
                                             Войти
                                 </button>
@@ -76,6 +61,7 @@ export function AuthorizationWindow() {
                                         >
                                             Отмена
                                 </span>
+                                <p>У вас ещё нет аккаута? <Link to={"/signup"} className={style.btn}>Зарегистрироваться</Link> </p>
                         </Form >
                     </div>
                 </div>
