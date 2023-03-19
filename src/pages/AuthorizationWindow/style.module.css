@@ -110,7 +110,8 @@ input[type='text']{
     padding-left: 5px;
 }
 
-.btn {
+.btn_registration {
+    height: 30px;
     margin-top: 10px;
     display: grid;
     text-align: center;
@@ -119,12 +120,13 @@ input[type='text']{
     box-shadow:  
     0 0 5px rgb(114, 114, 123),
     0 0 10px rgb(114, 114, 123); 
+    align-items: center;
 }
 
-.btn:active {
+.btn_registration:active {
     transform: scaleX(1.1);
 }
-.btn:hover {
+.btn_registration:hover {
     transform: scale(103%)
 }
 

@@ -3,7 +3,7 @@
 
 import style from './App.css';
 import { Header } from './components/Header/Header';
-import { Main } from './components/Main/Main';
+import { Main } from './pages/Main/Main';
 import { Footer } from './components/Footer/Footer';
 import { Promotion } from './components/Promotion/Promotion';
 import { AccountButton } from './components/AccountButton/AccountButton';

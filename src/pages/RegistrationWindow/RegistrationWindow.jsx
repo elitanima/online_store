@@ -94,7 +94,7 @@ export function RegistrationWindow() {
                                         >
                                             Отмена
                                 </span>
-                                <p>Есть аккаут? <Link to={"/signin"} className={style.btn} >Войти</Link> </p>
+                                <p>Есть аккаут? <Link to={"/signin"} className={style.btn_authorization} >Войти</Link> </p>
                         </Form>
                     </div>
                 </div>

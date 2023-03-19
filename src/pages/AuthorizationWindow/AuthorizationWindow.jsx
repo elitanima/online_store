@@ -61,7 +61,7 @@ export function AuthorizationWindow() {
                                         >
                                             Отмена
                                 </span>
-                                <p>У вас ещё нет аккаута? <Link to={"/signup"} className={style.btn}>Зарегистрироваться</Link> </p>
+                                <p>У вас ещё нет аккаута? <Link to={"/signup"} className={style.btn_registration}>Зарегистрироваться</Link> </p>
                         </Form >
                     </div>
                 </div>
