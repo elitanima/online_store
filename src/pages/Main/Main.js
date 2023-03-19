@@ -17,7 +17,6 @@ export function Main() {
             })
             if (res.ok) {
                 const response = await res.json();
-                console.log(response);
                 
                 return setData(response);
             } 

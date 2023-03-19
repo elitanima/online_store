@@ -10,15 +10,6 @@ export function Profile() {
 
     const [data, setData] = useState({});
 
-
-     // Отрываем страницу профиля
-        const goToUser = async (token) => {
-        const res = await userProfile(token);
-        const data = await res.json();
-       
-    }
-    
-
     useEffect(()=> {
 
         const token = localStorage.getItem('token');

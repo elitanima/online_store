@@ -5,7 +5,6 @@ import style from './style.module.css'
 import React from "react";
 
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from 'yup';
 import { signin } from "../../api/user"
@@ -30,7 +29,8 @@ export function AuthorizationWindow() {
         onSubmit={async (values) => {
             try {
                     await signin(values);
-                    navigate("/main")        
+                    navigate("/main")  
+     
             } catch (error) {
                 //Сделать вывод ошибок видимым пользователю!!!
                 console.log(error);
