@@ -4,15 +4,16 @@ import { useEffect, useState } from 'react'
 import { userProfile } from "../../api/user"
 import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
+import { useAutorization } from '../../hooks/useAutorization';
 import style from './style.module.css'
 
 export function Profile() {
 
     const [data, setData] = useState({});
 
-    useEffect(()=> {
+    const { token } = useAutorization()
 
-        const token = localStorage.getItem('token');
+    useEffect(()=> {
 
         const fetchData = async ()=>{
             const res = await userProfile(token);

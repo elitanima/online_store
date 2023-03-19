@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
+import { useAutorization } from '../../hooks/useAutorization';
 import style from './style.module.css'
 
 export function Main() {
 
     const [data, setData] = useState({products: [], total: 0});
 
+    const { token } = useAutorization()
+
     useEffect(()=> {
-
-        const token = localStorage.getItem('token');
-
         const fetchData = async ()=>{
             const res = await fetch('https://api.react-learning.ru/products', {
                 headers: {
