@@ -1,5 +1,5 @@
 
-import { ButtonAutorization } from '../ButtonAutorization/ButtonAutorization'
+import { ButtonAutorization } from '../../components/ButtonAutorization/ButtonAutorization'
 import style from './style.module.css'
 
 export function Autorization() {

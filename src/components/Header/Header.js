@@ -1,6 +1,5 @@
 
 import { AccountButton } from '../AccountButton/AccountButton'
-import { AllСontacts } from '../AllСontacts/AllСontacts'
 import style from './style.module.css'
 
 

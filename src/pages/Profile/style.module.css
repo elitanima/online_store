@@ -79,6 +79,6 @@
     /* media Adaptive */
 @media (max-width: 749px) {
   .screen_view {
-    grid-column: 1 / 8;
+    grid-column: 2 / 9;
   }
 }

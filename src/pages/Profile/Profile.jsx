@@ -1,10 +1,10 @@
 
 import { useEffect, useState } from 'react'
-import { Footer } from '../Footer/Footer'
-import { Header } from '../Header/Header'
+
 import { userProfile } from "../../api/user"
+import { Footer } from '../../components/Footer/Footer';
+import { Header } from '../../components/Header/Header';
 import style from './style.module.css'
-import { AccountButton } from '../AccountButton/AccountButton'
 
 export function Profile() {
 

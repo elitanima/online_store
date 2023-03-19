@@ -1,6 +1,6 @@
-import { AccountButton } from '../AccountButton/AccountButton'
-import { Footer } from '../Footer/Footer'
-import { Header } from '../Header/Header'
+import { AccountButton } from '../../components/AccountButton/AccountButton'
+import { Footer } from '../../components/Footer/Footer'
+import { Header } from '../../components/Header/Header'
 import style from './style.module.css'
 
 export function Basket() {
