@@ -9,24 +9,21 @@ import style from './style.module.css'
 
 export function Profile() {
 
-    // const [data, setData] = useState({});
-
     const { token } = useAutorization()
 
     const { data, isLoading, isError, error } = useQuery({
         queryKey: ['userProfile'],
         queryFn: async () => {
             const res = await userProfile(token);
-            if (res.ok) {
-                return await res.json();
-            } 
+                if (res.ok) {
+                    return await res.json();
+                } 
         }
-          
       })
 
-      if (isLoading) return <p>Загругка...</p>
+      if (isLoading) return <p>Загрузка...</p>
 
-      if (error) return <p>Произошла ошибка: </p>+ error.message
+      if (error) return <p>Произошла ошибка: </p> + error.message
 
      return (
         <div className={style.container}>

@@ -34,19 +34,6 @@ export function RegistrationWindow() {
 
     const navigate = useNavigate();
 
-    const [valid, setValid] = useState(false);
-
-
-
-     // Анимация валидации
-     function validAnim() {
-        setValid(!valid)
-    }
-    function animaForm() {
-        setTimeout(validAnim, 100);
-    }
-    // --END--
-
     return (
         <Formik
             initialValues={{ email: "", password: "", group: "9-gr"}}
@@ -85,7 +72,6 @@ export function RegistrationWindow() {
                                     <ErrorMessage name="group" />
                                 <button className={style.form_btn} 
                                         type="submit"
-                                        onClick={() =>setValid(!valid)}
                                         >
                                             Регистрация
                                 </button>
