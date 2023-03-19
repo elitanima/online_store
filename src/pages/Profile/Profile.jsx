@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react'
+import { useQuery } from '@tanstack/react-query';
 
 import { userProfile } from "../../api/user"
 import { Footer } from '../../components/Footer/Footer';
@@ -9,24 +9,24 @@ import style from './style.module.css'
 
 export function Profile() {
 
-    const [data, setData] = useState({});
+    // const [data, setData] = useState({});
 
     const { token } = useAutorization()
 
-    useEffect(()=> {
-
-        const fetchData = async ()=>{
+    const { data, isLoading, isError, error } = useQuery({
+        queryKey: ['userProfile'],
+        queryFn: async () => {
             const res = await userProfile(token);
             if (res.ok) {
-                const response = await res.json();
-               
-                
-                return setData(response);
+                return await res.json();
             } 
-                throw new Error('что то пошло не по плану');
         }
-        fetchData()
-    },[token])
+          
+      })
+
+      if (isLoading) return <p>Загругка...</p>
+
+      if (error) return <p>Произошла ошибка: </p>+ error.message
 
      return (
         <div className={style.container}>

@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react'
 import { useAutorization } from '../../hooks/useAutorization';
 import style from './style.module.css'
@@ -7,6 +8,14 @@ export function Main() {
     const [data, setData] = useState({products: [], total: 0});
 
     const { token } = useAutorization()
+
+    // const { data, isLoading, isError, error } = useQuery({
+    //     queryKey: ['repoData'],
+    //     queryFn: () =>
+    //       fetch('https://api.github.com/repos/tannerlinsley/react-query').then(
+    //         (res) => res.json(),
+    //       ),
+    //   })
 
     useEffect(()=> {
         const fetchData = async ()=>{

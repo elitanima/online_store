@@ -12,7 +12,9 @@ import { Autorization } from './pages/Authorization/Autorization';
 import { Basket } from './pages/Basket/Basket';
 import { AuthorizationWindow } from './pages/AuthorizationWindow/AuthorizationWindow';
 import { Profile } from './pages/Profile/Profile';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
+const queryClient = new QueryClient()
 
 //маршрутизация
 const router = createBrowserRouter([
@@ -59,7 +61,8 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-   
+    <QueryClientProvider client={queryClient} >
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>
 );
