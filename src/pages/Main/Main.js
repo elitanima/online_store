@@ -23,7 +23,7 @@ export function Main() {
                 throw new Error('что то пошло не по плану');
         }
         fetchData()
-    },[])
+    },[token])
 
     return (
         <section className={style.main}>

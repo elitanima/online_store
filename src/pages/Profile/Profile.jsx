@@ -26,7 +26,7 @@ export function Profile() {
                 throw new Error('что то пошло не по плану');
         }
         fetchData()
-    },[])
+    },[token])
 
      return (
         <div className={style.container}>
