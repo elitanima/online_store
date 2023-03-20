@@ -1,8 +1,5 @@
 
 .button_close_modal {
-    /* background-color: brown; */
-    /* display: grid;
-    grid-template-columns: repeat(1, 1fr); */
     text-align:center;
 }
 
@@ -49,19 +46,6 @@
     /* filter: invert(1); */
     border: none; 
 }
-
-/* qr коды как идея для внедрения в модульное окно контактов */
-
-/* .contacts_github_qr {
-    background-image: url(/src/components/ButtonClose/Modal/qr_code/qr_code_github.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-color: rgb(255, 255, 255, 0);
-    width: 100px;
-    height: 100px;
-    filter: invert(1);
-    border: none; 
-} */
 
 h4 {
     margin: 0;

@@ -36,7 +36,6 @@ export function AuthorizationWindow() {
     return (
         <Formik
         initialValues={{ email: "", password: ""}}
-        //Валидация формы авторизации и вывод ошибок сервера
         validationSchema={SignInSchema}
         onSubmit={onSubmit}
       >

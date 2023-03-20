@@ -8,7 +8,6 @@
     width: 90%;
     height: 65px;
     min-height: 65px;
-    /* max-height: 65px; */
     margin-top: 10px;
     justify-content: center;
     box-shadow:  
@@ -32,13 +31,11 @@
 .button_view {
     width: 100%;
     display: flex;
-    /* grid-template-columns: repeat(auto-fill, 3vw); */
     justify-content: end;
     justify-items: center;
     align-items: center;
     gap: 20px;
     margin-right: 10px;
-    /* padding: 10px; */
 }
 
 .button_exit {
@@ -74,6 +71,18 @@
     border: none; 
 }
 
+.all_contacts {
+    background-image: url(icon/contacts.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 35px;
+    height: 35px;
+    /* filter: invert(1); */
+    border: none; 
+    z-index: 3;
+}
+
 /* media Adaptive */
 @media (max-width: 749px) {
     .account_button {
@@ -85,37 +94,4 @@
         height: 160px;
         min-width: 50px;
     }
-}
-
-/* @media (max-width: 473px) {
-    .button_exit {
-        height: 20px;
-        width: 20px;
-    }
-}
-
-@media (max-width: 473px) {
-    .button_user {
-        height: 20px;
-        width: 20px;
-    }
-}
-
-@media (max-width: 473px) {
-    .button_basket {
-        height: 20px;
-        width: 20px;
-    }
-} */
-
-.all_contacts {
-    background-image: url(icon/contacts.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-color: rgb(255, 255, 255, 0);
-    width: 35px;
-    height: 35px;
-    /* filter: invert(1); */
-    border: none; 
-    z-index: 3;
 }

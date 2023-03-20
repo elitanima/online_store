@@ -2,12 +2,8 @@
 //Signup регистрация пользователя
 
 import style from './style.module.css';
-
 import { Link, useNavigate } from "react-router-dom";
-
-import { useState } from 'react'
 import React from "react";
-import ReactDOM from "react-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { signup } from "../../api/user"
 import * as Yup from 'yup';

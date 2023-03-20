@@ -15,9 +15,7 @@
 .modal {
     position: relative;
     display: grid;
-    /* grid-template-columns: (200px, 50px); */
     grid-template-columns: 15em 3em;
-    /* grid-template-rows: 10em 4.5em; */
     width: 290px;
     height: 290px;
     background: rgba(255, 255, 255, 1);
@@ -25,7 +23,6 @@
     0 0 5px rgb(114, 114, 123),
     0 0 10px rgb(114, 114, 123);  
     border-radius: 30px;
-   
 }
 
 
@@ -46,14 +43,6 @@
 
 .ButtonClose_grid {
     grid-column: 2 / 3;
-}
-
-.contact_grid {
-    
-}
-
-.close_module {
-    
 }
 
 span:active {

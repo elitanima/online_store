@@ -12,7 +12,7 @@ export function AccountButton() {
     
     const navigate = useNavigate();
    
-      //модальное окно контакты
+      //модальное окно контакты //переписать на порталы
       const [openButtonClose, setButtonClose] = useState();
       let Modal;
       if (openButtonClose){ 

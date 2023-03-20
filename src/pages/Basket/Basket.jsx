@@ -1,4 +1,3 @@
-import { AccountButton } from '../../components/AccountButton/AccountButton'
 import { Footer } from '../../components/Footer/Footer'
 import { Header } from '../../components/Header/Header'
 import { useAutorization } from '../../hooks/useAutorization'

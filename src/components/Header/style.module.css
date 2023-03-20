@@ -1,7 +1,6 @@
 .header {
     display: flex;
     align-items: center;
-   
     background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
     margin-top: 10px;
     border-radius: 20px;
@@ -10,6 +9,5 @@
     min-height: 65px;
     box-shadow:  
     0 0 5px rgb(114, 114, 123),
-    0 0 10px rgb(114, 114, 123);  
-    
+    0 0 10px rgb(114, 114, 123);    
 }

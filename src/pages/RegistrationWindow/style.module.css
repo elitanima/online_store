@@ -53,6 +53,7 @@ form {
 .form_data::placeholder {
     color: rgb(98, 76, 76);   
 }
+
 span {
     font-size: 13.3px;
     display: flex;
@@ -73,6 +74,7 @@ span {
 span:active {
     transform: scaleX(1.1);
 }
+
 span:hover {
     transform: scale(103%)
 }
@@ -93,6 +95,7 @@ span:hover {
 .btn_authorization:active {
     transform: scaleX(1.1);
 }
+
 .btn_authorization:hover {
     transform: scale(103%)
 }

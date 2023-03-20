@@ -44,6 +44,7 @@
 .form_data::placeholder {
     color: rgb(98, 76, 76);   
 }
+
 span {
     display: flex;
     justify-content: center;
@@ -75,12 +76,9 @@ button {
     width: 150px;
     height: 50px;
     background:  rgb(228, 228, 235);
-    /* border-radius: 15px; */
     border: none;
     outline: none;
     appearance: none;
-    
-    /* margin: 10px; */
     color: rgb(0, 0, 0);  
 }
 

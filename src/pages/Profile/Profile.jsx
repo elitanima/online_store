@@ -1,6 +1,5 @@
 
 import { useQuery } from '@tanstack/react-query';
-
 import { userProfile } from "../../api/user"
 import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
