@@ -24,19 +24,13 @@ export function AuthorizationWindow() {
 
     const { mutateAsync } = useMutation({
         mutationFn: async (values) => {
-          return await signin(values)
+            await signin(values)
+            navigate("/main")
         },
       })
 
       const onSubmit = async (values) => {
-            const res = await mutateAsync(values)
-        
-                if(res.ок){
-                    await res.json()
-                    return navigate("/main")
-            }
-            return console.log('Кое что пошло не так');
-              
+            await mutateAsync(values)   
          }
 
     return (

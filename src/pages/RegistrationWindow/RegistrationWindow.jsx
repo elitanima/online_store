@@ -11,6 +11,7 @@ import ReactDOM from "react-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { signup } from "../../api/user"
 import * as Yup from 'yup';
+import { useMutation } from '@tanstack/react-query';
 
 const SignUpSchema = Yup.object().shape({
     password: Yup.string()
@@ -34,23 +35,23 @@ export function RegistrationWindow() {
 
     const navigate = useNavigate();
 
+    const { mutateAsync } = useMutation({
+        mutationFn: async (values) => {
+            await signup(values)
+            navigate("/signin")
+        },
+      })
+
+      const onSubmit = async (values) => {
+            await mutateAsync(values)   
+         }
+
     return (
         <Formik
             initialValues={{ email: "", password: "", group: "9-gr"}}
             validationSchema={SignUpSchema}
-            //Валидация формы регистрации и вывод ошибок сервера
-            onSubmit={async (values) => {
-                // проверка на пустоту формы
-                try {
-                        await signup(values);
-                        navigate("/signin")
-                   
-                } catch (error) {
-                     //Сделать вывод ошибок видимым пользователю!!!
-                    console.log(error)
-                }
-               
-            }}>
+            onSubmit={onSubmit}>
+
             <div className={style.hidden}>
                 <div className={style.end_modal_registration}>  
                     <div className={style.modal}>
