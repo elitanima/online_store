@@ -34,8 +34,6 @@ export const signin = async (valuesSignIn) => {
     if (res.ok) {
         const response = await res.json();
         localStorage.setItem('token', response.token);
-        console.log(response);
-
         return true;
     } else {
         const response = await res.json();

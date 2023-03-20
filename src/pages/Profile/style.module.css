@@ -38,7 +38,6 @@
   }
 
 .screen_view {
-    /* background-color: rgb(21, 222, 105); */
     display: grid;
     gap: 10px;
     grid-template-rows: 1fr 9fr 1fr;
@@ -49,8 +48,7 @@
     grid-column: 3 / 8;
   }
 
-  .picture img {
-
+.picture img {
     max-width: 80%;
     width: 200px;
     height: 200px;
@@ -79,6 +77,6 @@
     /* media Adaptive */
 @media (max-width: 749px) {
   .screen_view {
-    grid-column: 1 / 8;
+    grid-column: 2 / 9;
   }
 }

@@ -1,9 +1,10 @@
-import { AccountButton } from '../AccountButton/AccountButton'
-import { Footer } from '../Footer/Footer'
-import { Header } from '../Header/Header'
+import { Footer } from '../../components/Footer/Footer'
+import { Header } from '../../components/Header/Header'
+import { useAutorization } from '../../hooks/useAutorization'
 import style from './style.module.css'
 
 export function Basket() {
+    const { token } = useAutorization()
     return (
         <div className={style.container}>
             <div className={style.screen_view}>
@@ -13,9 +14,6 @@ export function Basket() {
                     </div>
                 <Footer />
             </div> 
-            <div className='authorization'>
-                    <AccountButton />
-            </div>
         </div>
     )   
 }

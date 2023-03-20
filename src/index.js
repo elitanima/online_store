@@ -2,17 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { RegistrationWindow } from './components/RegistrationWindow/RegistrationWindow';
-import { AuthorizationWindow } from './components/AuthorizationWindow/AuthorizationWindow';
-import { Autorization } from './components/Authorization/Autorization';
-import { Basket } from './components/Basket/Basket';
-import { Profile } from './components/Profile/Profile';
+import { RegistrationWindow } from './pages/RegistrationWindow/RegistrationWindow';
+import { Autorization } from './pages/Authorization/Autorization';
+import { Basket } from './pages/Basket/Basket';
+import { AuthorizationWindow } from './pages/AuthorizationWindow/AuthorizationWindow';
+import { Profile } from './pages/Profile/Profile';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
+const queryClient = new QueryClient()
 
 //маршрутизация
 const router = createBrowserRouter([
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
   {
     //страница входа
     path: "/signin",
-    element: <AuthorizationWindow/>
+    element: <AuthorizationWindow />
   },
   {
     //страница регистрации
@@ -44,22 +45,16 @@ const router = createBrowserRouter([
   {
     //личный кабинет
     path: "/profile",
-    element: <Profile/>
-  },
-  // {
-  //   //Контакты
-  //   path: "/contacts",
-  //   element: <ButtonClose/>
-  // },
-
- 
+    element: <Profile />
+  }, 
 ]);
-//--end--//
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-   
+    <QueryClientProvider client={queryClient} >
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>
 );

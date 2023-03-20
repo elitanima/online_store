@@ -1,30 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useQuery } from '@tanstack/react-query';
+import { products } from '../../api/products';
+import { useAutorization } from '../../hooks/useAutorization';
 import style from './style.module.css'
 
 export function Main() {
 
-    const [data, setData] = useState({products: [], total: 0});
+    const { token } = useAutorization()
 
-    useEffect(()=> {
-
-        const token = localStorage.getItem('token');
-
-        const fetchData = async ()=>{
-            const res = await fetch('https://api.react-learning.ru/products', {
-                headers: {
-                    'Authorization': 'Bearer ' + token
-                }, 
-            })
+    const { data, isLoading, isError, error } = useQuery({
+        queryKey: ['products'],
+        queryFn: async () => {
+            const res = await products(token);
             if (res.ok) {
-                const response = await res.json();
-                console.log(response);
-                
-                return setData(response);
+                return await res.json();
             } 
-                throw new Error('что то пошло не по плану');
         }
-        fetchData()
-    },[])
+      })
+
+      if (isLoading) return <p>Загрузка...</p>
+
+      if (error) return <p>Произошла ошибка: </p> + error.message
 
     return (
         <section className={style.main}>

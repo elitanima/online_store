@@ -1,14 +1,9 @@
-//страница отображения контактов
+//страница отображения контактов //переписать на порталы
 
 import { Modal } from './Modal/Modal'
 import style from './style.module.css'
 
-// import { useNavigate } from "react-router-dom";
-
-
 export function ButtonClose( { openButtonClose, setButtonClose }) {
-
-    // const navigate = useNavigate();
 
     return (
         <div className={style.end_modal}>  

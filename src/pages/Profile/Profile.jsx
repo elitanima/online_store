@@ -1,40 +1,28 @@
 
-import { useEffect, useState } from 'react'
-import { Footer } from '../Footer/Footer'
-import { Header } from '../Header/Header'
+import { useQuery } from '@tanstack/react-query';
 import { userProfile } from "../../api/user"
+import { Footer } from '../../components/Footer/Footer';
+import { Header } from '../../components/Header/Header';
+import { useAutorization } from '../../hooks/useAutorization';
 import style from './style.module.css'
-import { AccountButton } from '../AccountButton/AccountButton'
 
 export function Profile() {
 
-    const [data, setData] = useState({});
+    const { token } = useAutorization()
 
-
-     // Отрываем страницу профиля
-        const goToUser = async (token) => {
-        const res = await userProfile(token);
-        const data = await res.json();
-       
-    }
-    
-
-    useEffect(()=> {
-
-        const token = localStorage.getItem('token');
-
-        const fetchData = async ()=>{
+    const { data, isLoading, isError, error } = useQuery({
+        queryKey: ['userProfile'],
+        queryFn: async () => {
             const res = await userProfile(token);
-            if (res.ok) {
-                const response = await res.json();
-               
-                
-                return setData(response);
-            } 
-                throw new Error('что то пошло не по плану');
+                if (res.ok) {
+                    return await res.json();
+                } 
         }
-        fetchData()
-    },[])
+      })
+
+      if (isLoading) return <p>Загрузка...</p>
+
+      if (error) return <p>Произошла ошибка: </p> + error.message
 
      return (
         <div className={style.container}>
@@ -59,9 +47,6 @@ export function Profile() {
                     </div>
                 <Footer />
             </div> 
-            <div className='authorization'>
-                    <AccountButton />
-            </div>
         </div>
     )   
 }

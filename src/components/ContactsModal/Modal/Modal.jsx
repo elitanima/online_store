@@ -1,7 +1,4 @@
-//Модуль контактов
-
 import style from './style.module.css'
-
 
 export function Modal() {
 
