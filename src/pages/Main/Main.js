@@ -15,7 +15,6 @@ export function Main() {
                 return await res.json();
             } 
         }
-          
       })
 
       if (isLoading) return <p>Загрузка...</p>

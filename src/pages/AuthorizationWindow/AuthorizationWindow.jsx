@@ -8,6 +8,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from 'yup';
 import { signin } from "../../api/user"
+import { useMutation } from '@tanstack/react-query';
 
 const SignInSchema = Yup.object().shape({
     password: Yup.string()
@@ -21,21 +22,29 @@ export function AuthorizationWindow() {
 
     const navigate = useNavigate();
 
+    const { mutateAsync } = useMutation({
+        mutationFn: async (values) => {
+          return await signin(values)
+        },
+      })
+
+      const onSubmit = async (values) => {
+            const res = await mutateAsync(values)
+        
+                if(res.ок){
+                    await res.json()
+                    return navigate("/main")
+            }
+            return console.log('Кое что пошло не так');
+              
+         }
+
     return (
         <Formik
         initialValues={{ email: "", password: ""}}
         //Валидация формы авторизации и вывод ошибок сервера
         validationSchema={SignInSchema}
-        onSubmit={async (values) => {
-            try {
-                    await signin(values);
-                    navigate("/main")  
-     
-            } catch (error) {
-                //Сделать вывод ошибок видимым пользователю!!!
-                console.log(error);
-            }
-        }}
+        onSubmit={onSubmit}
       >
             <div className={style.hidden}>
                 <div className={style.end_modal_avtorization}>  
