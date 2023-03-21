@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
     margin-top: 10px;
@@ -22,5 +22,6 @@
 @media (max-width:550px) {
     .header {
         flex-wrap: wrap;
+        height: 80px;
     }
 }
