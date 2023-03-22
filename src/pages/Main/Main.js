@@ -1,16 +1,22 @@
 import { useQuery } from '@tanstack/react-query';
-import { products } from '../../api/products';
+import { useSelector } from 'react-redux';
+import { searchProducts } from '../../api/products';
 import { useAutorization } from '../../hooks/useAutorization';
 import style from './style.module.css'
+
+const NoSearch = () => {
+    return <h2>По вашему запросу ничего не найдено</h2>
+}
 
 export function Main() {
 
     const { token } = useAutorization()
+    const { search } = useSelector(state => state.filter)
 
-    const { data, isLoading, isError, error } = useQuery({
-        queryKey: ['products'],
+    const { data: products, isLoading, isError, error } = useQuery({
+        queryKey: ['searchProducts', search],
         queryFn: async () => {
-            const res = await products(token);
+            const res = await searchProducts(token, search);
             if (res.ok) {
                 return await res.json();
             } 
@@ -23,9 +29,9 @@ export function Main() {
 
     return (
         <section className={style.main}>
-            {data.products.map(oneProduct =>
+            {products.length ?
+            products.map(oneProduct =>
                 <div className={style.card}>
-                    
                     <div className={style.picture}>
                         <img alt="" src={oneProduct.pictures} />
                     </div>
@@ -35,7 +41,7 @@ export function Main() {
                     </div>
                     <button className={style.btn_basket}>В корзину</button>
                 </div>
-            )}
+            ):<NoSearch />}
         </section>
     )   
 }
