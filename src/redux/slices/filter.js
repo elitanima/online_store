@@ -6,7 +6,7 @@ export const filterSlice = createSlice({
     initialState: initialFilterState,
     reducers: {
       changeSearchValue: (state, action) => {
-        return action.payload
+        state.search = action.payload
       },
     }
   })
