@@ -1,12 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { useSelector } from 'react-redux';
 import { searchProducts } from '../../api/products';
+import { NoSearch } from '../../components/NoSearch/NoSearch';
 import { useAutorization } from '../../hooks/useAutorization';
 import style from './style.module.css'
-
-const NoSearch = () => {
-    return <h2>По вашему запросу ничего не найдено</h2>
-}
 
 export function Main() {
 
