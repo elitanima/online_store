@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { initialBasketState } from "../initialVelues";
+import { initialBasketState } from "../initialValues";
 
 export const basketSlice = createSlice({
     name: 'basket',

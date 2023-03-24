@@ -35,6 +35,11 @@
       grid-column: 3 / 8;
     }
 
+    .wraper{
+      display: grid;
+      gap: 10px;
+    }
+
     /* media Adaptive */
 @media (max-width: 749px) {
   .screen_view {

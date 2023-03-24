@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { initialUserState } from "../initialVelues";
+import { initialUserState } from "../initialValues";
 
 export const userSlice = createSlice({
     name: 'user',

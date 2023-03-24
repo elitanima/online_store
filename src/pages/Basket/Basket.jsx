@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
 import { getCurrentProduct } from '../../api/products'
+import { BasketCard } from '../../components/BasketCard/BasketCard'
 import { Footer } from '../../components/Footer/Footer'
 import { Header } from '../../components/Header/Header'
 import { useAutorization } from '../../hooks/useAutorization'
@@ -35,7 +36,9 @@ export function Basket() {
                 <Header />
                     <div className={style.basket}>
                         <h1>Корзина</h1>
-                        {data.map(product => <div><p> {product.name} </p></div>)}
+                        <div className={style.wraper}>
+                        {data.map(product => <BasketCard key={product._id} product = {product} />)}
+                        </div>
                     </div>
                 <Footer />
             </div> 
