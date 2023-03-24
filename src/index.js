@@ -14,6 +14,7 @@ import { Profile } from './pages/Profile/Profile';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Provider } from 'react-redux'
 import { store } from './redux/store';
+import { Favorites } from './pages/Favorites/Favorites';
 
 const queryClient = new QueryClient()
 
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
     //личный кабинет
     path: "/profile",
     element: <Profile />
+  }, 
+  {
+    //избранное
+    path: "/favorites",
+    element: <Favorites />
   }, 
 ]);
 

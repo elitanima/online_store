@@ -2,7 +2,8 @@
 export const getInitialValues = () => {
 
     return {
-        filter: initialFilterState
+        filter: initialFilterState,
+        basket: initialBasketState
     }
 }
 
@@ -20,3 +21,5 @@ export const initialUserState = {
 export const initialFilterState = {
     search: ''
 }
+
+export const initialBasketState = []

@@ -1,11 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
 import { searchProducts } from '../../api/products';
 import { NoSearch } from '../../components/NoSearch/NoSearch';
 import { useAutorization } from '../../hooks/useAutorization';
+import { addToBasket } from '../../redux/slices/basket';
 import style from './style.module.css'
 
 export function Main() {
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch()
 
     const { token } = useAutorization()
     const { search } = useSelector(state => state.filter)
@@ -36,7 +41,7 @@ export function Main() {
                     <div >
                         <h3 className={style.normal__price}>{oneProduct.price} ₽</h3>
                     </div>
-                    <button className={style.btn_basket}>В корзину</button>
+                    <button className={style.btn_basket} onClick={() => dispatch(addToBasket(oneProduct._id))}>В корзину</button>
                 </div>
             ):<NoSearch />}
         </section>
