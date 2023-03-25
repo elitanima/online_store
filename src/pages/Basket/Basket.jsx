@@ -31,15 +31,16 @@ export function Basket() {
     if (isLoading) return <p>Загрузка...</p>
 
     if (error) return <p>Произошла ошибка: </p> + error.message
+
+    const test = () => {
+        dispatch(removeAllCart())
+    }
     return (
         <div className={style.container}>
             <div className={style.screen_view}>
-                <Header />
+                <Header test={test}/>
                     <div className={style.basket}>
                         <h1>Корзина</h1>
-                        <div className={style.button_container}>
-                        <button className={style.button} onClick={() => dispatch(removeAllCart())} >Удалить всё</button>
-                        </div>
                         <div className={style.wraper}>
                         {data.map(product => <BasketCard key={product._id} product = {product} />)}
                         </div>
