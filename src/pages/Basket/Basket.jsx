@@ -7,6 +7,7 @@ import { BasketCard } from '../../components/BasketCard/BasketCard'
 import { Footer } from '../../components/Footer/Footer'
 import { Header } from '../../components/Header/Header'
 import { useAutorization } from '../../hooks/useAutorization'
+import { removeAllCart } from '../../redux/slices/basket'
 import style from './style.module.css'
 
 export function Basket() {
@@ -36,6 +37,9 @@ export function Basket() {
                 <Header />
                     <div className={style.basket}>
                         <h1>Корзина</h1>
+                        <div className={style.button_container}>
+                        <button className={style.button} onClick={() => dispatch(removeAllCart())} >Удалить всё</button>
+                        </div>
                         <div className={style.wraper}>
                         {data.map(product => <BasketCard key={product._id} product = {product} />)}
                         </div>

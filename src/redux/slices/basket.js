@@ -20,10 +20,13 @@ export const basketSlice = createSlice({
       removeFromBasket: (state, action) => {
         // return action.payload
       },
+      removeAllCart: () => {
+        return initialBasketState
+      }
     }
   })
 
 
-export const { addToBasket, removeFromBasket } = basketSlice.actions
+export const { addToBasket, removeFromBasket, removeAllCart } = basketSlice.actions
 
 export const basketReducer = basketSlice.reducer
