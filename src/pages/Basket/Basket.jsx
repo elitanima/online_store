@@ -35,6 +35,20 @@ export function Basket() {
     const test = () => {
         dispatch(removeAllCart())
     }
+
+    if (!basket.length) {
+        return (
+            <div className={style.container}>
+                <div className={style.screen_view}>
+                    <Header test={test}/>
+                        <div className={style.basket}>
+                            <h1>Корзина пуста</h1>
+                        </div>
+                    <Footer />
+                </div> 
+            </div>
+        )   
+    }
     return (
         <div className={style.container}>
             <div className={style.screen_view}>
