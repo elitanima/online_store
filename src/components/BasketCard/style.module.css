@@ -38,3 +38,43 @@
 .price {
     margin-left: 10px;
 }
+
+.minus {
+    background-image: url(icon/minus.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 15px;
+    height: 15px;
+    /* filter: invert(1); */
+    border: none; 
+}
+
+.plus {
+    background-image: url(icon/plus.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 15px;
+    height: 15px;
+    /* filter: invert(1); */
+    border: none; 
+}
+
+.minus:active {
+    background-color:brown;
+    border-radius: 50%;
+}
+
+.minus:hover {
+    transform: scale(110%);
+}
+
+.plus:active {
+    background-color: rgb(13, 193, 34);
+    border-radius: 50%;
+}
+
+.plus:hover {
+    transform: scale(110%);
+}

@@ -8,12 +8,12 @@ import style from './style.module.css'
 
 
 
-export function Header( { test }) {
+export function Header( { deleteBasketCard }) {
     const location = useLocation()
     return (
         <header className={style.header}>
             { location.pathname ==='/main' ? <Search /> :null }
-            { location.pathname ==='/basket' ? <button className={style.button} onClick={()=> test()}>Удалить всё</button> :null }
+            { location.pathname ==='/basket' ? <button className={style.button} onClick={()=> deleteBasketCard()}>Удалить всё</button> :null }
             
             <AccountButton />
            

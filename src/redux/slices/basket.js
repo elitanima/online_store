@@ -22,11 +22,24 @@ export const basketSlice = createSlice({
       },
       removeAllCart: () => {
         return initialBasketState
-      }
+      },
+      changeCount(state, action) {
+        // приходит id c value
+        const idAndValue = action.payload;
+        if (idAndValue.value < 0) {
+          // удаляет продукт со страницы
+          return state.filter((product) => idAndValue.id !== product.id);
+        }
+        for (let product of state) {
+          if (product.id == idAndValue.id) {
+            product.count = idAndValue.value;
+          }
+        }
+      },
     }
   })
 
 
-export const { addToBasket, removeFromBasket, removeAllCart } = basketSlice.actions
+export const { addToBasket, removeFromBasket, removeAllCart, changeCount } = basketSlice.actions
 
 export const basketReducer = basketSlice.reducer

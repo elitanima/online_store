@@ -28,11 +28,19 @@ export function Basket() {
     
     // getCurrentProduct
 
-    if (isLoading) return <p>Загрузка...</p>
+    if (isLoading) return  <div className={style.container}>
+                <div className={style.screen_view}>
+                    <Header />
+                        <div className={style.basket}>
+                            <h1>Загрузка</h1>
+                        </div>
+                    <Footer />
+                </div> 
+            </div>
 
     if (error) return <p>Произошла ошибка: </p> + error.message
 
-    const test = () => {
+    const deleteBasketCard = () => {
         dispatch(removeAllCart())
     }
 
@@ -40,7 +48,7 @@ export function Basket() {
         return (
             <div className={style.container}>
                 <div className={style.screen_view}>
-                    <Header test={test}/>
+                    <Header />
                         <div className={style.basket}>
                             <h1>Корзина пуста</h1>
                         </div>
@@ -52,7 +60,7 @@ export function Basket() {
     return (
         <div className={style.container}>
             <div className={style.screen_view}>
-                <Header test={test}/>
+                <Header deleteBasketCard={deleteBasketCard}/>
                     <div className={style.basket}>
                         <h1>Корзина</h1>
                         <div className={style.wraper}>
