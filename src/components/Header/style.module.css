@@ -13,6 +13,31 @@
     0 0 10px rgb(114, 114, 123); 
 }
 
+.button {
+    font-size: 13.3px;
+    width: 100px;
+    height: 30px;
+    background:  rgb(228, 228, 235);
+    border: none;
+    outline: none;
+    appearance: none;
+    color: rgb(0, 0, 0);  
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow:  
+    0 0 5px rgb(114, 114, 123),
+    0 0 10px rgb(114, 114, 123);
+
+}
+
+.button:hover {
+    transform: scale(103%)
+}
+
+.button:active {
+    transform: scaleX(1.1);
+}
+
 @media (max-width:550px) {
     .header {
         justify-content: center;

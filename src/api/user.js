@@ -22,7 +22,7 @@ export const signup = async (newUser) => {
 
 // Авторизация пользователя
 export const signin = async (valuesSignIn) => {
-    const res = await fetch('https://api.react-learning.ru/signin', {
+   return fetch('https://api.react-learning.ru/signin', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -31,15 +31,6 @@ export const signin = async (valuesSignIn) => {
         body: JSON.stringify(valuesSignIn)
     })
 
-    if (res.ok) {
-        const response = await res.json();
-        localStorage.setItem('token', response.token);
-        return true;
-    } else {
-        const response = await res.json();
-        throw new Error(response.message);
-
-    }
 }
 
 // Информация о пользователе

@@ -72,6 +72,17 @@
     border: none; 
 }
 
+.button_favorites {
+    background-image: url(icon/heart.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 35px;
+    height: 35px;
+    /* filter: invert(1); */
+    border: none; 
+}
+
 .all_contacts {
     background-image: url(icon/contacts.png);
     background-repeat: no-repeat;
@@ -84,6 +95,13 @@
     z-index: 3;
 }
 
+.basket_number{
+    margin-top: 7px;
+    margin-bottom: 20px;
+    color: brown;
+    font-size: 12px;
+}
+
 /* media Adaptive */
 @media (max-width: 749px) {
     .account_button {
@@ -94,5 +112,12 @@
     .account_button {
         height: 160px;
         min-width: 50px;
+    }
+}
+
+@media (max-width: 473px) {
+    .button_view {
+        gap: 15px;
+        
     }
 }

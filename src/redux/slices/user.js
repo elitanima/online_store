@@ -1,14 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { initialUserState } from "../initialVelues";
+import { initialUserState } from "../initialValues";
 
 export const userSlice = createSlice({
     name: 'user',
     initialState: initialUserState,
     reducers: {
-      setUser: (state, action) => {
+      setUser: (_, action) => {
         return action.payload
       },
-      removeUser: (state) => {
+      removeUser: () => {
         return initialUserState
       }
     }

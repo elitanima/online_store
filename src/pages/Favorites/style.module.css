@@ -1,5 +1,5 @@
 
-.basket {
+.favorites {
     overflow: scroll;
     background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
     /* filter: blur(1px); */
@@ -34,18 +34,6 @@
       min-height: 500px;
       grid-column: 3 / 8;
     }
-
-    .wraper{
-      display: grid;
-      gap: 10px;
-    }
-
-    .button_container{
-      display: flex;
-      justify-content: end;
-    }
-
-  
 
     /* media Adaptive */
 @media (max-width: 749px) {
