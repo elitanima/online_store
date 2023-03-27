@@ -23,3 +23,15 @@ export const initialFilterState = {
 }
 
 export const initialBasketState = []
+
+export const getInitialValuesLocalStorage = () => {
+    const lc_store = localStorage.getItem('reduxState')
+  
+    if (lc_store) {
+      return JSON.parse(lc_store)
+    }
+  
+    return {
+      user: initialUserState
+    }
+  }

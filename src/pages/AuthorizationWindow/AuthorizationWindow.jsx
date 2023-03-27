@@ -9,6 +9,8 @@ import { Link, useNavigate } from "react-router-dom";
 import * as Yup from 'yup';
 import { signin } from "../../api/user"
 import { useMutation } from '@tanstack/react-query';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../redux/slices/user';
 
 const SignInSchema = Yup.object().shape({
     password: Yup.string()
@@ -21,17 +23,27 @@ const SignInSchema = Yup.object().shape({
 export function AuthorizationWindow() {
 
     const navigate = useNavigate();
-
+    const dispatch = useDispatch()
 
     const { mutateAsync } = useMutation({
-        mutationFn: async (values) => {
-            await signin(values)
-            navigate("/main")
+        mutationFn: (values) => {
+            return signin(values)
+            
         },
       })
 
       const onSubmit = async (values) => {
-            await mutateAsync(values)   
+            const res = await mutateAsync(values)
+            if (res.ok) {
+                const responce = await res.json();
+                dispatch(setUser({
+                  ...responce.data,
+                  token: responce.token
+                }))
+                return navigate('/main')
+              }
+          
+              return alert('Что то пошло не так')
          }
 
     return (
