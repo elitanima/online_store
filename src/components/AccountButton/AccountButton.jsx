@@ -34,7 +34,7 @@ export function AccountButton() {
             <div className={style.button_view}>
                 <ProductsButton /> 
                 <button className={style.button_user} onClick={() => navigate("/profile")}></button> 
-                <button className={style.button_basket} onClick={() => navigate("/basket")}><h3 className={style.basket_number}>{basket.length}</h3></button>
+                <button className={style.button_basket} onClick={() => navigate("/basket")}><h3 className={style.basket_number}>{basket.length ? basket.length :null }</h3></button>
                 <button className={style.button_favorites} onClick={() => navigate("/favorites")}><h3></h3></button>
                 <button className={style.all_contacts} onClick={() => {setButtonClose(!openButtonClose)}}></button>
                 <button className={style.button_exit} onClick={() => exit()}></button>

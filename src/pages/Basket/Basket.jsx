@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
+import { Link } from 'react-router-dom'
 import { getCurrentProduct } from '../../api/products'
 import { BasketCard } from '../../components/BasketCard/BasketCard'
 import { Footer } from '../../components/Footer/Footer'
@@ -51,6 +52,7 @@ export function Basket() {
                     <Header />
                         <div className={style.basket}>
                             <h1>Корзина пуста</h1>
+                            <Link to={'/main'} >Каталог продуктов</Link>
                         </div>
                     <Footer />
                 </div> 

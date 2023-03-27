@@ -26,12 +26,12 @@ export const basketSlice = createSlice({
       changeCount(state, action) {
         // приходит id c value
         const idAndValue = action.payload;
-        if (idAndValue.value < 0) {
+        if (idAndValue.value < 1) {
           // удаляет продукт со страницы
           return state.filter((product) => idAndValue.id !== product.id);
         }
         for (let product of state) {
-          if (product.id == idAndValue.id) {
+          if (product.id === idAndValue.id) {
             product.count = idAndValue.value;
           }
         }
