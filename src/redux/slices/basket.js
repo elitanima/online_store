@@ -36,10 +36,13 @@ export const basketSlice = createSlice({
           }
         }
       },
+      deleteProductInBasket(state, action) {
+        return state.filter((product) => action.payload !== product.id);
+      },
     }
   })
 
 
-export const { addToBasket, removeFromBasket, removeAllCart, changeCount } = basketSlice.actions
+export const { addToBasket, removeFromBasket, removeAllCart, changeCount, deleteProductInBasket } = basketSlice.actions
 
 export const basketReducer = basketSlice.reducer

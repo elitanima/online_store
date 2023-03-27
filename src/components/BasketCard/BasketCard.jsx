@@ -4,7 +4,7 @@ import { products } from '../../api/products'
 import { Basket } from '../../pages/Basket/Basket';
 import style from './style.module.css'
 import {
-    changeCount,
+    changeCount, deleteProductInBasket,
   } from "../../redux/slices/basket";
 
 export function BasketCard({ product }){
@@ -25,6 +25,10 @@ export function BasketCard({ product }){
 
   const count = counter();
 
+  const deleteOneProduct = () => {
+    dispatch(deleteProductInBasket(product._id));
+  };
+
     return (
       <>
          <div className={style.container}>
@@ -37,15 +41,20 @@ export function BasketCard({ product }){
             <div className={style.price}>
                 {product.price * count} ₽
             </div>
-            <div className={style.minus}
-            onClick={() => {
-            dispatch(changeCount({ id: product._id, value: count - 1 }));
-          }}></div>
-          <div>{count}</div>
-          <div className={style.plus}
-          onClick={() => {
-            dispatch(changeCount({ id: product._id, value: count + 1 }));
-          }}></div>
+                <div className={style.container_count}>
+                    <div className={style.minus}
+                    onClick={() => {
+                    dispatch(changeCount({ id: product._id, value: count - 1 }));
+                    }}></div>
+                    <div className={style.count}>{count}</div>
+                    <div className={style.plus}
+                    onClick={() => {
+                        dispatch(changeCount({ id: product._id, value: count + 1 }));
+                    }}></div>
+                </div>
+                    <div className={style.delete}
+                    onClick={deleteOneProduct}></div>
+                
          </div>
       </>
     )   
