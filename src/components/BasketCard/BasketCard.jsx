@@ -1,7 +1,5 @@
 
 import { useDispatch, useSelector } from 'react-redux';
-import { products } from '../../api/products'
-import { Basket } from '../../pages/Basket/Basket';
 import style from './style.module.css'
 import {
     changeCount, deleteProductInBasket,
@@ -10,9 +8,7 @@ import {
 export function BasketCard({ product }){
     const dispatch = useDispatch();
     const products = useSelector((state) => state.basket); 
-    console.log(products);
 
-    // функция кол-ва штучек
   const counter = () => {
     let count = 0;
     for (let position of products) {
