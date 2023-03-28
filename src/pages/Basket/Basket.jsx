@@ -14,6 +14,7 @@ import style from './style.module.css'
 export function Basket() {
     const { token } = useAutorization()
     const basket = useSelector(state => state.basket)
+    console.log(basket);
     const {data, isLoading, isError, error} = useQuery({
         queryKey: ['getBasketProduct', basket, token],
         queryFn: async () => {

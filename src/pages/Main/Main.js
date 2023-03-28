@@ -5,6 +5,7 @@ import { searchProducts } from '../../api/products';
 import { NoSearch } from '../../components/NoSearch/NoSearch';
 import { useAutorization } from '../../hooks/useAutorization';
 import { addToBasket } from '../../redux/slices/basket';
+import { addToFavorites } from '../../redux/slices/favorites';
 import style from './style.module.css'
 
 export function Main() {
@@ -42,6 +43,7 @@ export function Main() {
                         <h3 className={style.normal__price}>{oneProduct.price} ₽</h3>
                     </div>
                     <button className={style.btn_basket} onClick={() => dispatch(addToBasket(oneProduct._id))}>В корзину</button>
+                    <button className={style.btn_basket} onClick={() => dispatch(addToFavorites(oneProduct._id))}>Избранное</button>
                 </div>
             ):<NoSearch />}
         </section>
