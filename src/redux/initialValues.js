@@ -1,11 +1,11 @@
 
-export const getInitialValues = () => {
+// export const getInitialValues = () => {
 
-    return {
-        filter: initialFilterState,
-        basket: initialBasketState
-    }
-}
+//     return {
+//         filter: initialFilterState,
+//         basket: initialBasketState
+//     }
+// }
 
 export const initialUserState = {
     token:'',
@@ -32,6 +32,7 @@ export const getInitialValuesLocalStorage = () => {
     }
   
     return {
-      user: initialUserState
+      user: initialUserState,
+      basket: initialBasketState
     }
   }
