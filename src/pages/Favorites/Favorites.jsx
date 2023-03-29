@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
+import { Link } from 'react-router-dom'
 import { getCurrentProduct } from '../../api/products'
 import { BasketCard } from '../../components/BasketCard/BasketCard'
 import { FavoritCard } from '../../components/FavoritCard/FavoritCard'
@@ -38,6 +39,20 @@ export function Favorites() {
 
 if (error) return <p>Произошла ошибка: </p> + error.message
 
+if (!favorites.length) {
+    return (
+        <div className={style.container}>
+            <div className={style.screen_view}>
+                <Header />
+                    <div className={style.favorites_no}>
+                        <h1>Избранных товаров нет</h1>
+                        <Link to={'/main'} >Каталог продуктов</Link>
+                    </div>
+                <Footer />
+            </div> 
+        </div>
+    )   
+}
     return (
         <div className={style.container}>
             <div className={style.screen_view}>
