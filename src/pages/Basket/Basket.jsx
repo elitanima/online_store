@@ -14,9 +14,8 @@ import style from './style.module.css'
 export function Basket() {
     const { token } = useAutorization()
     const basket = useSelector(state => state.basket)
-    console.log(basket);
     const {data, isLoading, isError, error} = useQuery({
-        queryKey: ['getBasketProduct', basket, token],
+        queryKey: ['getBasketProduct', basket.length, token],
         queryFn: async () => {
             return await Promise.allSettled(
              basket.map(element => getCurrentProduct(token, element.id)

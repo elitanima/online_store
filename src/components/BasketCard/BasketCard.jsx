@@ -43,10 +43,12 @@ export function BasketCard({ product }){
                     dispatch(changeCount({ id: product._id, value: count - 1 }));
                     }}></div>
                     <div className={style.count}>{count}</div>
-                    <div className={style.plus}
-                    onClick={() => {
+                    <button
+                      disabled={count === product.stock}
+                      className={style.plus}
+                      onClick={() => {
                         dispatch(changeCount({ id: product._id, value: count + 1 }));
-                    }}></div>
+                    }}></button>
                 </div>
                     <div className={style.delete}
                     onClick={deleteOneProduct}></div>
