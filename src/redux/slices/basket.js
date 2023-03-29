@@ -17,9 +17,9 @@ export const basketSlice = createSlice({
         })
         return state
       },
-      removeFromBasket: (state, action) => {
-        // return action.payload
-      },
+      // removeFromBasket: (state, action) => {
+      //   // return action.payload
+      // },
       removeAllCart: () => {
         return initialBasketState
       },

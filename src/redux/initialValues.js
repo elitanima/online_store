@@ -24,6 +24,8 @@ export const initialFilterState = {
 
 export const initialBasketState = []
 
+export const initialFavoritesState = []
+
 export const getInitialValuesLocalStorage = () => {
     const lc_store = localStorage.getItem('reduxState')
   
@@ -33,6 +35,7 @@ export const getInitialValuesLocalStorage = () => {
   
     return {
       user: initialUserState,
-      basket: initialBasketState
+      basket: initialBasketState,
+      favorites: initialFavoritesState
     }
   }
