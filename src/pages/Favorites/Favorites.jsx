@@ -15,7 +15,7 @@ export function Favorites() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const favorites = useSelector(state => state.favorites)
-    console.log(favorites);
+
     const {data, isLoading, isError, error} = useQuery({
         queryKey: ['getBasketProduct', favorites, token],
         queryFn: async () => {
@@ -42,7 +42,7 @@ if (error) return <p>Произошла ошибка: </p> + error.message
         <div className={style.container}>
             <div className={style.screen_view}>
                 <Header />
-                    <div className={style.favorites}>  
+                    <div className={style.favorites}> 
                         {data.map(product => <FavoritCard key={product._id} product = {product} />)}
                     </div>
                 <Footer />

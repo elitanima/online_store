@@ -35,6 +35,7 @@ export function Main() {
             {products.length ?
             products.map(oneProduct =>
                 <div className={style.card}>
+                    <button className={style.btn_favorites} onClick={() => dispatch(addToFavorites(oneProduct._id))}></button>
                     <div className={style.picture}>
                         <img alt="" src={oneProduct.pictures} />
                     </div>
@@ -43,7 +44,7 @@ export function Main() {
                         <h3 className={style.normal__price}>{oneProduct.price} ₽</h3>
                     </div>
                     <button className={style.btn_basket} onClick={() => dispatch(addToBasket(oneProduct._id))}>В корзину</button>
-                    <button className={style.btn_basket} onClick={() => dispatch(addToFavorites(oneProduct._id))}>Избранное</button>
+                    
                 </div>
             ):<NoSearch />}
         </section>

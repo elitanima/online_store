@@ -80,3 +80,20 @@
         0 0 5px rgb(114, 114, 123),
         0 0 10px rgb(114, 114, 123);  
 }
+
+.btn_favorites {
+    background-image: url(icon/heart.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 25px;
+    height: 25px;
+    /* filter: invert(1); */
+    border: none; 
+    justify-content: end;
+    align-items: end;
+}
+
+.btn_favorites:active {
+    transform: scale(120%);
+}
