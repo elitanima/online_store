@@ -14,6 +14,7 @@ export function AccountButton() {
     
     const navigate = useNavigate();
     const basket = useSelector(state => state.basket)
+    const favorites = useSelector(state => state.favorites)
    
       //модальное окно контакты //переписать на порталы
       const [openButtonClose, setButtonClose] = useState();
@@ -35,7 +36,7 @@ export function AccountButton() {
                 <ProductsButton /> 
                 <button className={style.button_user} onClick={() => navigate("/profile")}></button> 
                 <button className={style.button_basket} onClick={() => navigate("/basket")}><h3 className={style.basket_number}>{basket.length ? basket.length :null }</h3></button>
-                <button className={style.button_favorites} onClick={() => navigate("/favorites")}><h3></h3></button>
+                <button className={style.button_favorites} onClick={() => navigate("/favorites")}><h3 className={style.favorites_number}>{favorites.length ? favorites.length :null }</h3></button>
                 <button className={style.all_contacts} onClick={() => {setButtonClose(!openButtonClose)}}></button>
                 <button className={style.button_exit} onClick={() => exit()}></button>
         
