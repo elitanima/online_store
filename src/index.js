@@ -15,6 +15,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Provider } from 'react-redux'
 import { store } from './redux/store';
 import { Favorites } from './pages/Favorites/Favorites';
+import { CurrentProduct } from './pages/CurrentProduct/CurrentProduct';
 
 const queryClient = new QueryClient()
 
@@ -29,6 +30,12 @@ const router = createBrowserRouter([
     //главная страница
     path: "/main",
     element:  <App />
+  },
+
+  {
+    //главная страница
+    path: "/main/:idOfProduct",
+    element:  <CurrentProduct />
   },
   {
     //страница входа

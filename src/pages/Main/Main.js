@@ -2,13 +2,14 @@ import { useQuery } from '@tanstack/react-query';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { searchProducts } from '../../api/products';
+import { CardProduct } from '../../components/CardProduct/CardProduct';
 import { NoSearch } from '../../components/NoSearch/NoSearch';
 import { useAutorization } from '../../hooks/useAutorization';
 import { addToBasket } from '../../redux/slices/basket';
 import { addToFavorites } from '../../redux/slices/favorites';
 import style from './style.module.css'
 
-export function Main() {
+export function Main( { oneProduct }) {
 
     const navigate = useNavigate();
     const dispatch = useDispatch()
@@ -33,19 +34,9 @@ export function Main() {
     return (
         <section className={style.main}>
             {products.length ?
-            products.map(oneProduct =>
-                <div className={style.card}>
-                    <button className={style.btn_favorites} onClick={() => dispatch(addToFavorites(oneProduct._id))}></button>
-                    <div className={style.picture}>
-                        <img alt="" src={oneProduct.pictures} />
-                    </div>
-                    <p> {oneProduct.name} </p>
-                    <div >
-                        <h3 className={style.normal__price}>{oneProduct.price} ₽</h3>
-                    </div>
-                    <button className={style.btn_basket} onClick={() => dispatch(addToBasket(oneProduct._id))}>В корзину</button>
-                    
-                </div>
+            products.map(oneProduct => {
+                return <CardProduct oneProduct={oneProduct} key={oneProduct._id}/>
+            }
             ):<NoSearch />}
         </section>
     )   
