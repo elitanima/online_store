@@ -6,14 +6,12 @@ import { changeSearchValue } from '../../redux/slices/filter'
 import style from './style.module.css'
 
 export const Search = () => {
-    const [searchParams, setSearchParams] = useSearchParams()   
+    const [searchParams] = useSearchParams()   
     const [value, setValue] = useState(() => {
        const inputSearchValue = searchParams.get('search')
        return inputSearchValue ? inputSearchValue : ''
     })
     
-    
-
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const debounceValue = useDebounce(value, 500)

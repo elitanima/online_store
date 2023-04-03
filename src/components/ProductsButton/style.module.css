@@ -1,7 +1,6 @@
 .ProductsButton {
     width: 100%;
     display: flex;
-    justify-content: end;
     margin: 10px;
     gap: 20px;
 }
@@ -13,6 +12,5 @@
         background-color: rgb(255, 255, 255, 0);
         width: 35px;
         height: 35px;
-        /* filter: invert(1); */
         border: none; 
 }

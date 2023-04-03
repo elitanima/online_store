@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { getCurrentProduct } from '../../api/products'
 import { FavoritCard } from '../../components/FavoritCard/FavoritCard'
@@ -12,8 +11,6 @@ import style from './style.module.css'
 export function Favorites() {
     const { token } = useAutorization()
 
-    const navigate = useNavigate()
-    const dispatch = useDispatch()
     const favorites = useSelector(state => state.favorites)
 
     const {data, isLoading, isError, error} = useQuery({
@@ -36,7 +33,7 @@ export function Favorites() {
     </div> 
 </div>
 
-if (error) return <p>Произошла ошибка: </p> + error.message
+if (isError) return <p>Произошла ошибка: </p> + error.message
 
 if (!favorites.length) {
     return (

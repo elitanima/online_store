@@ -1,10 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { getInitialValuesLocalStorage } from "./initialValues";
 import { basketReducer } from "./slices/basket";
-import { favoritesReducer, favoritesSlice } from "./slices/favorites";
+import { favoritesReducer } from "./slices/favorites";
 import { filterReducer } from "./slices/filter";
 import { userReducer } from "./slices/user";
-
 
 export const store = configureStore ({
     preloadedState: getInitialValuesLocalStorage(),

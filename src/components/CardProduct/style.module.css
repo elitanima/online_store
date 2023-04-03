@@ -1,0 +1,79 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient( rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+    box-shadow:  
+        0 0 5px rgb(114, 114, 123),
+        0 0 10px rgb(114, 114, 123);  
+    border-radius: 20px;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    height: 350px;
+}
+
+.btn_favorites {
+    background-image: url(icon/heart.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(255, 255, 255, 0);
+    width: 25px;
+    height: 25px;
+    border: none; 
+    justify-content: end;
+    align-items: end;
+}
+
+.picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.normal__price {
+    margin: 0;
+    height: 28px;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.btn_basket {
+    width: 150px;
+    height: 30px;
+    margin: 7px;
+    border-radius: 5px;
+    padding: 0;
+    appearance: none;
+    outline:none;
+    border: none;
+    box-shadow:  
+    0 0 5px rgb(114, 114, 123),
+    0 0 10px rgb(114, 114, 123);  
+}
+
+.picture img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.btn_favorites:active {
+    transform: scale(120%);
+}
+
+.card:hover {
+    transform: scale(103%);
+    box-shadow:  
+        0 0 5px rgb(114, 114, 123),
+        0 0 10px rgb(255, 255, 255);  
+}
