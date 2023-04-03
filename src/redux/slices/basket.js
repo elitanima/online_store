@@ -21,10 +21,8 @@ export const basketSlice = createSlice({
         return initialBasketState
       },
       changeCount(state, action) {
-        // приходит id c value
         const idAndValue = action.payload;
         if (idAndValue.value < 1) {
-          // удаляет продукт со страницы
           return state.filter((product) => idAndValue.id !== product.id);
         }
         for (let product of state) {
