@@ -21,4 +21,5 @@
 
 .CardProduct {
   text-align: center;
+  overflow: scroll;
 }

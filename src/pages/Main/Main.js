@@ -1,18 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router';
+import { useSelector } from 'react-redux';
 import { searchProducts } from '../../api/products';
 import { CardProduct } from '../../components/CardProduct/CardProduct';
 import { NoSearch } from '../../components/NoSearch/NoSearch';
 import { useAutorization } from '../../hooks/useAutorization';
-import { addToBasket } from '../../redux/slices/basket';
-import { addToFavorites } from '../../redux/slices/favorites';
 import style from './style.module.css'
 
-export function Main( { oneProduct }) {
-
-    const navigate = useNavigate();
-    const dispatch = useDispatch()
+export function Main() {
 
     const { token } = useAutorization()
     const { search } = useSelector(state => state.filter)

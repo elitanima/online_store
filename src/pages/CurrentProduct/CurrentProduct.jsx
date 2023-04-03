@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router"
 import { Link } from "react-router-dom";
 import { getCurrentProduct } from '../../api/products';
 import { CardProduct } from "../../components/CardProduct/CardProduct";
+import { CardSinglProduct } from "../../components/CardSinglProduct/CardSinglProduct";
 import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
 import { useAutorization } from "../../hooks/useAutorization";
@@ -26,14 +27,14 @@ export const CurrentProduct = () => {
 
     if (isLoading) return <p>Загрузка...</p>
 
-    if (error) return <p>Произошла ошибка: </p> + error.message
+    if (isError) return <p>Произошла ошибка: </p> + error.message
 
     return(
         <div className={style.container}>
         <div className={style.screen_view}>
             <Header/>
                 <div className={style.CardProduct}>
-                    <CardProduct oneProduct={CurrentProduct}/>
+                    <CardSinglProduct oneProduct={CurrentProduct}/>
                     <Link to={'/main'} >Каталог продуктов</Link>
                 </div>
             <Footer />
