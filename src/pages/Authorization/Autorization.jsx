@@ -1,4 +1,3 @@
-
 import { ButtonAutorization } from '../../components/ButtonAutorization/ButtonAutorization'
 import style from './style.module.css'
 

@@ -1,9 +1,7 @@
 .container {
     display: grid;
     background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
-    /* filter: blur(1px); */
     border-radius: 20px;
-    /* min-height: 320px; */
     margin: 10px;
     text-align: center;
     height: 200px;
@@ -23,11 +21,6 @@
 }
 
 .picture {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* text-align: center; */
     width: 100px;
     height: 100px;
     
@@ -37,7 +30,6 @@
     margin-left: 10px;
 }
 
-
 .delete {
     background-image: url(icon/delete.png);
     background-repeat: no-repeat;
@@ -45,7 +37,6 @@
     background-color: rgb(255, 255, 255, 0);
     width: 15px;
     height: 15px;
-    /* filter: invert(1); */
     border: none; 
     justify-content: end;
     align-items: end;

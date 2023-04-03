@@ -1,12 +1,3 @@
-
-// export const getInitialValues = () => {
-
-//     return {
-//         filter: initialFilterState,
-//         basket: initialBasketState
-//     }
-// }
-
 export const initialUserState = {
     token:'',
     name:'',

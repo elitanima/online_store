@@ -1,6 +1,4 @@
-
 //Signup регистрация пользователя
-
 import style from './style.module.css';
 import { Link, useNavigate } from "react-router-dom";
 import React from "react";
@@ -22,12 +20,6 @@ const SignUpSchema = Yup.object().shape({
   });
 
 export function RegistrationWindow() {
-
-    const initialValues = {
-        password: '',
-        email: '',
-        group: '9-gr'
-      }
 
     const navigate = useNavigate();
 

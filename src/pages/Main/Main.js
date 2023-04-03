@@ -23,7 +23,7 @@ export function Main() {
 
       if (isLoading) return <p>Загрузка...</p>
 
-      if (error) return <p>Произошла ошибка: </p> + error.message
+      if (isError) return <p>Произошла ошибка: </p> + error.message
 
     return (
         <section className={style.main}>

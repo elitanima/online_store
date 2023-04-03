@@ -1,4 +1,3 @@
-
 .end_modal{
     position: absolute;
     display: flex;
@@ -38,7 +37,6 @@
     appearance: none;
     outline:none;
     border: none;
-    /* filter: invert(1); */
 }
 
 .ButtonClose_grid {

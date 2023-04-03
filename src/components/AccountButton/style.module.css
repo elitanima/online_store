@@ -13,7 +13,6 @@
     box-shadow:  
     0 0 5px rgb(114, 114, 123),
     0 0 10px rgb(114, 114, 123);  
-    
 }
 
 .button {
@@ -31,7 +30,6 @@
 .button_view {
     width: 100%;
     display: flex;
-    justify-content: end;
     justify-items: center;
     align-items: center;
     gap: 20px;
@@ -46,7 +44,6 @@
     background-color: rgb(255, 255, 255, 0);
     width: 35px;
     height: 35px;
-    /* filter: invert(1); */
     border: none; 
 }
 
@@ -57,7 +54,6 @@
     background-color: rgb(255, 255, 255, 0);
     width: 35px;
     height: 35px;
-    /* filter: invert(1); */
     border: none; 
 }
 
@@ -68,7 +64,6 @@
     background-color: rgb(255, 255, 255, 0);
     width: 35px;
     height: 35px;
-    /* filter: invert(1); */
     border: none; 
 }
 
@@ -79,7 +74,6 @@
     background-color: rgb(255, 255, 255, 0);
     width: 35px;
     height: 35px;
-    /* filter: invert(1); */
     border: none; 
 }
 
@@ -90,7 +84,6 @@
     background-color: rgb(255, 255, 255, 0);
     width: 35px;
     height: 35px;
-    /* filter: invert(1); */
     border: none; 
     z-index: 3;
 }
@@ -125,6 +118,5 @@
 @media (max-width: 473px) {
     .button_view {
         gap: 15px;
-        
     }
 }

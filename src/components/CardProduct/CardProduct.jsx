@@ -1,5 +1,4 @@
-
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import style from './style.module.css'
 import { addToBasket } from "../../redux/slices/basket";
 import { addToFavorites } from '../../redux/slices/favorites';

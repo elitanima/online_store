@@ -1,4 +1,3 @@
-
 import { useQuery } from '@tanstack/react-query';
 import { userProfile } from "../../api/user"
 import { Footer } from '../../components/Footer/Footer';
@@ -22,7 +21,7 @@ export function Profile() {
 
       if (isLoading) return <p>Загрузка...</p>
 
-      if (error) return <p>Произошла ошибка: </p> + error.message
+      if (isError) return <p>Произошла ошибка: </p> + error.message
 
      return (
         <div className={style.container}>

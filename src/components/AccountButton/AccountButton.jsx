@@ -1,14 +1,9 @@
-
-
 import style from './style.module.css'
 import { useNavigate } from "react-router-dom";
-
 import { ButtonClose } from '../ContactsModal/ButtonClose';
 import { useState } from 'react';
 import { ProductsButton } from '../ProductsButton/ProductsButton';
 import { useSelector } from 'react-redux';
-
-
 
 export function AccountButton() {
     
@@ -16,13 +11,11 @@ export function AccountButton() {
     const basket = useSelector(state => state.basket)
     const favorites = useSelector(state => state.favorites)
    
-      //модальное окно контакты //переписать на порталы
       const [openButtonClose, setButtonClose] = useState();
       let Modal;
       if (openButtonClose){ 
           Modal = <ButtonClose openButtonClose={openButtonClose} setButtonClose={setButtonClose} />
         }
-      // --END--
 
     const exit = () => {
         localStorage.clear()

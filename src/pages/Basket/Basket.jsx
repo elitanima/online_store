@@ -1,7 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 import { getCurrentProduct } from '../../api/products'
 import { BasketCard } from '../../components/BasketCard/BasketCard'
@@ -24,11 +22,8 @@ export function Basket() {
          }
     })
 
-    const navigate = useNavigate()
     const dispatch = useDispatch()
     
-    // getCurrentProduct
-
     if (isLoading) return  <div className={style.container}>
                 <div className={style.screen_view}>
                     <Header />
@@ -39,7 +34,7 @@ export function Basket() {
                 </div> 
             </div>
 
-    if (error) return <p>Произошла ошибка: </p> + error.message
+    if (isError) return <p>Произошла ошибка: </p> + error.message
 
     const deleteBasketCard = () => {
         dispatch(removeAllCart())
